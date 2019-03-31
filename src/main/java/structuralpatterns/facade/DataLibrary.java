@@ -1,0 +1,37 @@
+package structuralpatterns.facade;
+// ˅
+import java.util.*;
+import java.text.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+// ˄
+
+public class DataLibrary {
+    // ˅
+    
+    // ˄
+
+    // Read a data library file.
+    static Properties getProperties(String dataLibraryFileName) {
+        // ˅
+        Properties prop = new Properties();
+        try {
+            prop.load(new FileInputStream(dataLibraryFileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(-1);
+        }
+
+        return prop;
+        // ˄
+    }
+
+    // ˅
+    
+    // ˄
+}
+
+// ˅
+
+// ˄

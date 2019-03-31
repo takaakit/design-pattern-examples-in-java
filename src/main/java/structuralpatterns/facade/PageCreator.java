@@ -1,0 +1,40 @@
+package structuralpatterns.facade;
+// ˅
+import java.util.*;
+import java.text.*;
+import java.io.FileWriter;
+import java.io.IOException;
+
+// ˄
+
+public class PageCreator {
+    // ˅
+    
+    // ˄
+
+    static void createSimpleHomepage(String mailAddress, String htmlFileName) {
+        // ˅
+        Properties addressBook = DataLibrary.getProperties("src/main/java/structuralpatterns/facade/addressbook.txt");
+        String userName = addressBook.getProperty(mailAddress);
+        try {
+            HtmlWriter writer = new HtmlWriter(new FileWriter(htmlFileName));
+            writer.heading(userName + "'s homepage");
+            writer.paragraph("Welcome to " + userName + "'s homepage.");
+            writer.paragraph("Please email me at this address.");
+            writer.mailto(mailAddress, userName);
+            writer.close();
+            System.out.println(htmlFileName + " is created for " + mailAddress + " (" + userName + ")");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // ˄
+    }
+
+    // ˅
+    
+    // ˄
+}
+
+// ˅
+
+// ˄

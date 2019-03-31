@@ -1,0 +1,151 @@
+package behavioralpatterns.mediator;
+// ˅
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+// ˄
+
+public class AppLogin extends Application implements Mediator {
+    // ˅
+    
+    // ˄
+
+    private ColleagueRadioButton radioLogin;
+
+    private ColleagueRadioButton radioGuest;
+
+    private ColleagueTextField textUsername;
+
+    private ColleagueTextField textPassword;
+
+    private ColleagueButton buttonOk;
+
+    private ColleagueButton buttonCancel;
+
+    public AppLogin() {
+        // ˅
+        this.radioLogin = null;
+        this.radioGuest = null;
+        this.textUsername = null;
+        this.textPassword = null;
+        this.buttonOk = null;
+        this.buttonCancel = null;
+        
+        // ˄
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        // ˅
+        // Create TextField, Button and RadioButton
+        createColleagues();
+
+        ToggleGroup toggleGroup = new ToggleGroup();
+        radioGuest.setToggleGroup(toggleGroup);
+        radioLogin.setToggleGroup(toggleGroup);
+
+        // Set a initial state
+        radioGuest.setSelected(true);
+        textUsername.setActivation(false);
+        textPassword.setActivation(false);
+        buttonOk.setActivation(true);
+        buttonCancel.setActivation(true);
+
+        // Create panes
+        HBox checkBoxPane = new HBox(radioGuest, radioLogin);
+        checkBoxPane.setSpacing(5.0);
+
+        GridPane textFieldPane = new GridPane();
+        textFieldPane.setHgap(5.0);
+        textFieldPane.setVgap(2.0);
+        textFieldPane.add(new Label("Username:"), 0, 0);
+        textFieldPane.add(textUsername, 1, 0);
+        textFieldPane.add(new Label("Password:"), 0, 1);
+        textFieldPane.add(textPassword, 1, 1);
+
+        HBox bottomPane = new HBox(buttonOk, buttonCancel);
+        bottomPane.setSpacing(5.0);
+        bottomPane.setAlignment(Pos.CENTER_RIGHT);
+
+        VBox mainPane = new VBox(checkBoxPane, textFieldPane, bottomPane);
+        mainPane.setSpacing(5.0);
+        mainPane.setPadding(new Insets(5.0, 5.0, 5.0, 5.0));
+
+        // Create a scene
+        Scene scene = new Scene(mainPane);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Mediator Example");
+        primaryStage.setOnCloseRequest(e -> System.exit(0));
+
+        // Set mediators
+        radioGuest.mediator = this;
+        radioLogin.mediator = this;
+        textUsername.mediator = this;
+        textPassword.mediator = this;
+        buttonOk.mediator = this;
+        buttonCancel.mediator = this;
+
+        // Show
+        primaryStage.show();
+        // ˄
+    }
+
+    @Override
+    public void createColleagues() {
+        // ˅
+        radioGuest = new ColleagueRadioButton("Guest");
+        radioLogin = new ColleagueRadioButton("Login");
+        textUsername = new ColleagueTextField("");
+        textPassword = new ColleagueTextField("");
+        buttonOk = new ColleagueButton("OK");
+        buttonCancel = new ColleagueButton("Cancel");
+        // ˄
+    }
+
+    // Change enable/disable of the Colleagues when notified from the Mediators.
+    @Override
+    public void colleagueChanged() {
+        // ˅
+        if (buttonOk.isPressed()
+                || buttonCancel.isPressed()) {
+            System.exit(0);
+        }
+        else {
+            if (radioGuest.isSelected()) {    // Guest mode
+                textUsername.setActivation(false);
+                textPassword.setActivation(false);
+                buttonOk.setActivation(true);
+            }
+            else {                                  // Login mode
+                textUsername.setActivation(true);
+                textPassword.setActivation(true);
+
+                // Judge whether the changed Colleague is enabled or disabled
+                if (!textUsername.getText().isEmpty()
+                        && !textPassword.getText().isEmpty()) {
+                    buttonOk.setActivation(true);
+                }
+                else {
+                    buttonOk.setActivation(false);
+                }
+            }
+        }
+        // ˄
+    }
+
+    // ˅
+    
+    // ˄
+}
+
+// ˅
+
+// ˄

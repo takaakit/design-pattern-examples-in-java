@@ -1,0 +1,55 @@
+package structuralpatterns.proxy;
+// ˅
+import java.util.*;
+import java.text.*;
+
+// ˄
+
+public class RealPrinter implements Printer {
+    // ˅
+    
+    // ˄
+
+    String printerName;
+
+    public RealPrinter(String name) {
+        // ˅
+        this.printerName = name;
+        heavyTask("Creating an instance(" + name + ") of the Printer");
+        // ˄
+    }
+
+    // Display a content with the name
+    @Override
+    public void output(String content) {
+        // ˅
+        System.out.println("=== " + printerName + " ===");
+        System.out.println(content);
+        // ˄
+    }
+
+    // Heavy task (Please think so...)
+    private void heavyTask(String message) {
+        // ˅
+        System.out.print(message);
+        for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                System.exit(-1);
+            }
+            System.out.print(".");
+        }
+        System.out.println("Done.");
+        // ˄
+    }
+
+    // ˅
+    
+    // ˄
+}
+
+// ˅
+
+// ˄

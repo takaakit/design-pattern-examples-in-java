@@ -1,0 +1,37 @@
+package structuralpatterns.bridge;
+// ˅
+import java.util.*;
+import java.text.*;
+
+// ˄
+
+public class MultiLineDisplay extends Display {
+    // ˅
+    
+    // ˄
+
+    public MultiLineDisplay(DisplayImpl impl) {
+        // ˅
+        super(impl);
+        // ˄
+    }
+
+    // Repeat display for the specified number of times
+    void displayMultiple(int times) {
+        // ˅
+        open();
+        for (int i = 0; i < times; i++) {
+            write();
+        }
+        close();
+        // ˄
+    }
+
+    // ˅
+    
+    // ˄
+}
+
+// ˅
+
+// ˄
