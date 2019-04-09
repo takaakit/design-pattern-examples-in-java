@@ -62,7 +62,7 @@ public class File extends FileSystemElement {
 
 **M PLUS プラグイン**
 * [M PLUS プラグインのサイト](https://sites.google.com/view/m-plus-plugin/download)からプラグインをダウンロードしインストールしてください。  
-  **~~バージョン 2.4 以降をダウンロードしてください。~~** バージョン 2.4 は近日公開予定です。まだ公開されていません。  
+  **バージョン 2.4.0 以降をダウンロードしてください。**  
 
 **Java 開発環境**
 * 任意の Java 開発環境を用意してください。[IntelliJ](https://www.jetbrains.com/idea/download/) など。
