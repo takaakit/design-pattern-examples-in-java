@@ -1,6 +1,8 @@
 package behavioralpatterns.templatemethod;
 
-// Display the character and string repeatedly 5 times.
+/*
+Display a character or string repeatedly 5 times.
+ */
 
 public class Main {
     public static void main(String[] args) {

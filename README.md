@@ -1,4 +1,4 @@
-[<img src="./screenshots/DiagramMap.svg">](https://raw.githubusercontent.com/takaakit/design-pattern-examples-in-java/master/screenshots/DiagramMap.svg)
+![](screenshots/DiagramMap.svg "All Design Patterns")
 
 Design Pattern Examples in Java
 ===
@@ -13,7 +13,7 @@ You can utilize this examples as follows.
 
 > UML model example:
 
-![](screenshots/CompositePattern.png "Composite Pattern")
+![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > Java code example:
 

@@ -1,6 +1,8 @@
 package structuralpatterns.bridge;
 
-// Display only one line or display the specified number of lines.
+/*
+Display only one line or display the specified number of lines.
+ */
 
 public class Main {
     public static void main(String[] args) {

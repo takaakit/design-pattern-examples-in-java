@@ -4,7 +4,9 @@ import creationalpatterns.factorymethod.framework.Factory;
 import creationalpatterns.factorymethod.framework.Product;
 import creationalpatterns.factorymethod.idcard.CreditCardFactory;
 
-// Factory to make ID cards.
+/*
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+ */
 
 public class Main {
     public static void main(String[] args) {

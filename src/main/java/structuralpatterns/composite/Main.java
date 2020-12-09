@@ -1,6 +1,8 @@
 package structuralpatterns.composite;
 
-// Represents a file system composed of files and directories.
+/*
+Represents a file system composed of files and directories. "FileSystemElement" makes it possible to treat "File" and "Directory" uniformly.
+ */
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package structuralpatterns.decorator;
 
-// Display a character string with a decorative frame.
+/*
+Display a string with decorative frames. The frames can be combined arbitrarily.
+ */
 
 public class Main {
     public static void main(String[] args) {

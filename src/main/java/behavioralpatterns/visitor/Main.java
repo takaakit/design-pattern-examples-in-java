@@ -1,6 +1,8 @@
 package behavioralpatterns.visitor;
 
-// Visitors visit a file system composed of files and directories, and displays a list of files/directories.
+/*
+Visitor visits the file system composed of files and directories, and displays a list of files/directories.
+ */
 
 public class Main {
     public static void main(String[] args) {

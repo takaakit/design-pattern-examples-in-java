@@ -1,7 +1,8 @@
 package structuralpatterns.proxy;
 
-// At the time of printing, create an instance of the printer for the first time.
-// In order to spend time creating a printer, call a heavy task when creating a printer instance.
+/*
+Print on a named printer. Setting and changing the printer name is done by Proxy("PrinterProxy"). At the time of printing, create an instance of the RealSubject("RealPrinter") for the first time.
+ */
 
 public class Main {
     public static void main(String[] args) {

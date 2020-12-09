@@ -5,7 +5,9 @@ import creationalpatterns.abstractfactory.factory.Factory;
 import creationalpatterns.abstractfactory.factory.Link;
 import creationalpatterns.abstractfactory.factory.Page;
 
-// Create a hierarchical link collection as an HTML file.
+/*
+Create a hierarchical link collection as an HTML file. It can be created in either tabular or list format.
+ */
 
 public class Main {
     public static void main(String[] args) {

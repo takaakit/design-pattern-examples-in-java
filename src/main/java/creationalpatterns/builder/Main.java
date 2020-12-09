@@ -5,7 +5,9 @@ import structuralpatterns.adapter.Print;
 import structuralpatterns.bridge.Display;
 import structuralpatterns.bridge.MultiLineDisplay;
 
-// Create documents in HTML format and text format.
+/*
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+ */
 
 public class Main {
     public static void main(String[] args) {

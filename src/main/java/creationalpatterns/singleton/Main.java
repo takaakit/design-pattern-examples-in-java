@@ -1,6 +1,8 @@
 package creationalpatterns.singleton;
 
-// Check whether the same instance is obtained.
+/*
+Check whether the same instance is obtained.
+ */
 
 public class Main {
     public static void main(String[] args) {

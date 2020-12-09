@@ -1,12 +1,10 @@
 package behavioralpatterns.strategy;
 
 /*
-A game of rock-scissors-paper.
-There are two strategies below.
-
+A game of rock-scissors-paper. Two strategies are available:
 * When winning a game, show the same hand at the next time.
 * Calculate a hand from the previous hand stochastically.
-*/
+ */
 
 public class Main {
     public static void main(String[] args) {

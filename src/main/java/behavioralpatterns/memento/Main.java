@@ -6,7 +6,7 @@ A dice game in which money increases and decreases:
 * If the number of dice is even, gamer's money doubles, and if it is odd, gamer's money is halved.
 * If the gamer's money is less than half of the highest amount, it returns to the highest amount.
 * The game is repeated.
-*/
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
