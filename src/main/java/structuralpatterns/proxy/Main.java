@@ -5,9 +5,9 @@ package structuralpatterns.proxy;
 
 public class Main {
     public static void main(String[] args) {
-        PrinterProxy p = new PrinterProxy("Emily's printer");
+        PrinterProxy p = new PrinterProxy("PRINTER-A");
         System.out.println("The current printer is " + p.getPrinterName() + ".");
-        p.setPrinterName("William's printer");
+        p.setPrinterName("PRINTER-B");
         System.out.println("The current printer is " + p.getPrinterName() + ".");
         p.output("Nice to meet you.");
     }

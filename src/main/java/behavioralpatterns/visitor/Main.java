@@ -5,30 +5,28 @@ package behavioralpatterns.visitor;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Create a file system...");
-        Directory rootDir = new Directory("root");
-        Directory homeDir = new Directory("home");
+
         Directory binDir = new Directory("bin");
-        Directory etcDir = new Directory("etc");
+        File lsFile = new File("ls", 20);
+        binDir.add(lsFile);
+        File mkdirFile = new File("mkdir", 40);
+        binDir.add(mkdirFile);
+
         Directory emilyDir = new Directory("emily");
+        File homeworkFile = new File("homework.doc", 60);
+        emilyDir.add(homeworkFile);
+
         Directory jamesDir = new Directory("james");
-        Directory oliviaDir = new Directory("olivia");
+        File appFile = new File("app.exe", 80);
+        jamesDir.add(appFile);
 
-        rootDir.add(homeDir);
-        rootDir.add(binDir);
-        rootDir.add(etcDir);
-
-        binDir.add(new File("ls", 100));
-        binDir.add(new File("mkdir", 50));
+        Directory homeDir = new Directory("home");
         homeDir.add(emilyDir);
         homeDir.add(jamesDir);
-        homeDir.add(oliviaDir);
 
-        emilyDir.add(new File("homework.doc", 40));
-        jamesDir.add(new File("homework.doc", 50));
-        jamesDir.add(new File("app.exe", 60));
-        oliviaDir.add(new File("homework.doc", 70));
-        oliviaDir.add(new File("app.exe", 80));
-        oliviaDir.add(new File("tips.html", 90));
+        Directory rootDir = new Directory("root");
+        rootDir.add(homeDir);
+        rootDir.add(binDir);
 
         rootDir.accept(new ListVisitor());
     }

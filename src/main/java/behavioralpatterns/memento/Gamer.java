@@ -10,14 +10,8 @@ public class Gamer {
 
     // ˄
 
-    // Dessert name table
-    private static String[] dessertsName = {"Cake", "Candy", "Cookie"};
-
     // Gamer's money
     int money;
-
-    // Acquired desserts
-    private List<String> desserts;
 
     // Random number generator
     private final Random random;
@@ -25,33 +19,15 @@ public class Gamer {
     Gamer(int money) {
         // ˅
         this.money = money;
-        this.desserts = new ArrayList<>();
         this.random = new Random();
 
-        // ˄
-    }
-
-    // Get a dessert
-    private String getDessert() {
-        // ˅
-        String prefix = "";
-        if (random.nextBoolean()) {
-            prefix = "Delicious ";
-        }
-        return prefix + dessertsName[random.nextInt(dessertsName.length)];
         // ˄
     }
 
     // Get current status
     Memento createMemento() {
         // ˅
-        Memento memento = new Memento(money);
-        for (String dessert : desserts) {
-            if (dessert.startsWith("Delicious ")) {         // Add a only delicious dessert
-                memento.addDessert(dessert);
-            }
-        }
-        return memento;
+        return new Memento(money);
         // ˄
     }
 
@@ -59,7 +35,6 @@ public class Gamer {
     void restoreMemento(Memento memento) {
         // ˅
         this.money = memento.money;
-        this.desserts = memento.desserts;
         // ˄
     }
 
@@ -67,26 +42,28 @@ public class Gamer {
     void play() {
         // ˅
         int dice = random.nextInt(6) + 1;    // Shake a dice
+        System.out.println("The number of dice is " + dice + ".");
+
+        int preMoney = money;
         switch (dice) {
         case 1:
-            // In case of 1...Gamer's money increases
-            money += 100;
-            System.out.println("Gamer's money increases.");
+        case 3:
+        case 5:
+            // In case of odd...Money is halved
+            money /= 2;
+            System.out.println("Gamer's money is halved: " + preMoney + " -> " + money);
             break;
         case 2:
-            // In case of 2...Gamer's money halves
-            money /= 2;
-            System.out.println("Gamer's money halves.");
-            break;
+        case 4:
         case 6:
-            // In case of 6...Gamer gets desserts
-            String dessert = getDessert();
-            System.out.println("Gamer gets desserts(" + dessert + ")");
-            desserts.add(dessert);
+            // In case of even...Money doubles
+            money *= 2;
+            System.out.println("Gamer's money doubles: " + preMoney + " -> " + money);
             break;
         default:
-            // Other...Nothing happens
-            System.out.println("Nothing happens.");
+            // Other...Exit
+            System.err.println("Unexpected value.");
+            System.exit(-1);
         }
         // ˄
     }
@@ -94,7 +71,7 @@ public class Gamer {
     @Override
     public String toString() {
         // ˅
-        return "[money = " + money + ", desserts = " + desserts + "]";
+        return "[money = " + money + "]";
         // ˄
     }
 

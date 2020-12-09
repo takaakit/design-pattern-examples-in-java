@@ -7,28 +7,10 @@ public class Main {
         Display displayA = new MessageDisplay("Nice to meet you.");
         displayA.show();
 
-        Display displayB = new SideFrame(displayA, '!');
+        Display displayB = new SideFrame(new MessageDisplay("Nice to meet you."), '!');
         displayB.show();
 
-        Display displayC = new FullFrame(displayB);
+        Display displayC = new FullFrame(new SideFrame(new MessageDisplay("Nice to meet you."), '!'));
         displayC.show();
-
-        Display displayD = new SideFrame(
-            new FullFrame(
-                new FullFrame(
-                    new SideFrame(
-                        new SideFrame(
-                            new FullFrame(
-                                new MessageDisplay("See you again.")
-                            ),
-                            '#'
-                        ),
-                        '#'
-                    )
-                )
-            ),
-            '#'
-        );
-        displayD.show();
     }
 }

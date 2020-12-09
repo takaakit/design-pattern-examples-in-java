@@ -23,8 +23,10 @@ public class RealPrinter implements Printer {
     @Override
     public void output(String content) {
         // ˅
-        System.out.println("=== " + printerName + " ===");
+        System.out.println("==========");
         System.out.println(content);
+        System.out.println("Printed by " + printerName);
+        System.out.println("==========");
         // ˄
     }
 

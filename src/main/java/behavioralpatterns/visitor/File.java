@@ -10,6 +10,10 @@ public class File extends FileSystemElement {
     
     // ˄
 
+    private String name;
+
+    private int size;
+
     public File(String name, int size) {
         // ˅
         this.name = name;

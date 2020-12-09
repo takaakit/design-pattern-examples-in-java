@@ -10,6 +10,8 @@ public class Directory extends FileSystemElement {
     
     // ˄
 
+    private String name;
+
     private final List<FileSystemElement> elements;
 
     public Directory(String name) {
@@ -17,6 +19,24 @@ public class Directory extends FileSystemElement {
         this.name = name;
         this.elements = new ArrayList<>();
         
+        // ˄
+    }
+
+    @Override
+    public String getName() {
+        // ˅
+        return name;
+        // ˄
+    }
+
+    @Override
+    public int getSize() {
+        // ˅
+        int size = 0;
+        for (FileSystemElement element : elements) {
+            size += element.getSize();
+        }
+        return size;
         // ˄
     }
 

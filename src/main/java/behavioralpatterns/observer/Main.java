@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         RandomNumber number = new RandomNumber();
         Observer digitObserver = new DigitObserver();
-        Observer barChartObserver = new BarChartObserver();
         number.addObserver(digitObserver);
+        Observer barChartObserver = new BarChartObserver();
         number.addObserver(barChartObserver);
         number.generate();
     }

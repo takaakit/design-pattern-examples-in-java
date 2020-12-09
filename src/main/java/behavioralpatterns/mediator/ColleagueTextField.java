@@ -11,7 +11,7 @@ public class ColleagueTextField extends TextField implements Colleague {
     
     // ˄
 
-    Mediator mediator;
+    private Mediator mediator;
 
     ColleagueTextField(String text) {
         // ˅

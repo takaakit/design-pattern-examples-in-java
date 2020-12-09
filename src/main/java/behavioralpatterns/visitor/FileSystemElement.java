@@ -10,10 +10,6 @@ public abstract class FileSystemElement implements Element {
     
     // ˄
 
-    protected String name;
-
-    protected int size;
-
     public abstract String getName();
 
     public abstract int getSize();
@@ -21,7 +17,7 @@ public abstract class FileSystemElement implements Element {
     @Override
     public String toString() {
         // ˅
-        return name + " (" + size + ")";
+        return getName() + " (" + getSize() + ")";
         // ˄
     }
 

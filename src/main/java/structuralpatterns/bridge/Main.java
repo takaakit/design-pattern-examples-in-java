@@ -5,11 +5,10 @@ package structuralpatterns.bridge;
 public class Main {
     public static void main(String[] args) {
         Display d1 = new Display(new TextDisplayImpl("Japan"));
-        MultiLineDisplay d2 = new MultiLineDisplay(new TextDisplayImpl("The United States of America"));
-        MultiLineDisplay d3 = new MultiLineDisplay(new TextDisplayImpl("Brazil"));
         d1.output();
+
+        MultiLineDisplay d2 = new MultiLineDisplay(new TextDisplayImpl("The United States of America"));
         d2.output();
-        d3.output();
-        d3.displayMultiple(3);
+        d2.displayMultiple(3);
     }
 }

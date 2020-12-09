@@ -7,16 +7,17 @@ import creationalpatterns.prototype.framework.Manager;
 
 public class Main {
     public static void main(String[] args) {
-        // Create a manager
         Manager manager = new Manager();
+
+        // Register instances of the "Display" subclass
         Display emphasisUnderline = new UnderlineDisplay('~');
-        Display highlightFrame = new FrameDisplay('+');
-        Display warningFrame = new FrameDisplay('#');
         manager.registerDisplay("emphasis", emphasisUnderline);
+        Display highlightFrame = new FrameDisplay('+');
         manager.registerDisplay("highlight", highlightFrame);
+        Display warningFrame = new FrameDisplay('#');
         manager.registerDisplay("warning", warningFrame);
 
-        // Create displays
+        // Require to display
         Display display1 = manager.getDisplay("emphasis");
         display1.show("Nice to meet you.");
         Display display2 = manager.getDisplay("highlight");

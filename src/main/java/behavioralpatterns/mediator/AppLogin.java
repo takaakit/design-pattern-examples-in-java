@@ -86,12 +86,12 @@ public class AppLogin extends Application implements Mediator {
         primaryStage.setOnCloseRequest(e -> System.exit(0));
 
         // Set mediators
-        radioGuest.mediator = this;
-        radioLogin.mediator = this;
-        textUsername.mediator = this;
-        textPassword.mediator = this;
-        buttonOk.mediator = this;
-        buttonCancel.mediator = this;
+        radioGuest.setMediator(this);
+        radioLogin.setMediator(this);
+        textUsername.setMediator(this);
+        textPassword.setMediator(this);
+        buttonOk.setMediator(this);
+        buttonCancel.setMediator(this);
 
         // Show
         primaryStage.show();

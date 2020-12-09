@@ -15,7 +15,7 @@ public class ColleagueButton extends Button implements Colleague {
     
     // ˄
 
-    Mediator mediator;
+    private Mediator mediator;
 
     ColleagueButton(String caption) {
         // ˅

@@ -10,9 +10,9 @@ public abstract class FileSystemElement {
     
     // ˄
 
-    protected String name;
+    public abstract String getName();
 
-    protected int size;
+    public abstract int getSize();
 
     // Print this element with the "upperPath".
     public abstract void print(String upperPath);
@@ -20,7 +20,7 @@ public abstract class FileSystemElement {
     @Override
     public String toString() {
         // ˅
-        return name + " (" + size + ")";
+        return getName() + " (" + getSize() + ")";
         // ˄
     }
 

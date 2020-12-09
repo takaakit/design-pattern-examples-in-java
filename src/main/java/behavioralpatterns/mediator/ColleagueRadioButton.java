@@ -13,7 +13,7 @@ public class ColleagueRadioButton extends RadioButton implements Colleague {
     
     // ˄
 
-    Mediator mediator;
+    private Mediator mediator;
 
     ColleagueRadioButton(String caption) {
         // ˅

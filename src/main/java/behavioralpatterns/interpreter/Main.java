@@ -4,7 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 /*
-Analyze the syntax of the mini-language composed of "forward", "left", "right", and "repeat" commands.
+Parse the following syntax composed of "forward", "left", "right", and "repeat" commands:
+
+<program>      ::= program <command list>
+<command list> ::= <command>* end
+<command>      ::= <repeat> | <action>
+<repeat>       ::= repeat <number> <command list>
+<action>       ::= forward | right | left
+<number>       ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
 -----
 Examples before and after syntax analysis.
