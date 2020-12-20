@@ -1,15 +1,15 @@
 package behavioralpatterns.strategy;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 
 public interface Strategy {
 
-    Hand nextHand();
+    // Show a hand signal.
+    HandSignal showHandSignal();
 
-    void learn(boolean win);
+    // Notify a game result.
+    void notifyGameResult(GameResultType result, HandSignal ownHand, HandSignal opponentsHand);
 
     // ˅
     

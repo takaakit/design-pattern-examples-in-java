@@ -1,7 +1,5 @@
 package behavioralpatterns.strategy;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 
@@ -31,35 +29,31 @@ public class Player {
         // ˄
     }
 
-    // Calculate a hand from the strategy.
-    Hand nextHand() {
+    // Show a hand signal from the strategy.
+    HandSignal showHandSignal() {
         // ˅
-        return strategy.nextHand();
+        return strategy.showHandSignal();
         // ˄
     }
 
-    // Won a game.
-    void won() {
+    // Notify a game result.
+    void notifyGameResult(GameResultType result, HandSignal ownHand, HandSignal opponentsHand) {
         // ˅
-        strategy.learn(true);
-        winCount++;
-        gameCount++;
-        // ˄
-    }
+        switch (result) {
+            case Win:
+                winCount++;
+                gameCount++;
+                break;
+            case Loss:
+                lossCount++;
+                gameCount++;
+                break;
+            case Draw:
+                gameCount++;
+                break;
+        }
 
-    // Lost a game.
-    void lost() {
-        // ˅
-        strategy.learn(false);
-        lossCount++;
-        gameCount++;
-        // ˄
-    }
-
-    // Drew a game.
-    void drew() {
-        // ˅
-        gameCount++;
+        strategy.notifyGameResult(result, ownHand, opponentsHand);
         // ˄
     }
 

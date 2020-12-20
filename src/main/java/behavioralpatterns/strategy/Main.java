@@ -2,44 +2,42 @@ package behavioralpatterns.strategy;
 
 /*
 A game of rock-scissors-paper. Two strategies are available:
-* When winning a game, show the same hand at the next time.
-* Calculate a hand from the previous hand stochastically.
+* Random Strategy: showing a random hand signal.
+* Mirror Strategy: showing a hand signal from the previous opponent's hand signal.
  */
+
+import static behavioralpatterns.strategy.GameResultType.*;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Usage: java Main RandomSeedNumber1 RandomSeedNumber2");
-            System.out.println("Ex.  : java Main 314 15");
-        }
-        else {
-            int randomSeed1 = Integer.parseInt(args[0]);
-            int randomSeed2 = Integer.parseInt(args[1]);
-            Player player1 = new Player("Emily", new StrategyA(randomSeed1));
-            Player player2 = new Player("James", new StrategyB(randomSeed2));
+        Player player1 = new Player("Emily", new RandomStrategy());
+        Player player2 = new Player("James", new MirrorStrategy());
 
-            for (int i = 0; i < 100; i++) {
-                Hand nextHand1 = player1.nextHand();
-                Hand nextHand2 = player2.nextHand();
-                if (nextHand1.isStrongerThan(nextHand2)) {
-                    System.out.println("Winner: " + player1);
-                    player1.won();
-                    player2.lost();
-                }
-                else if (nextHand2.isStrongerThan(nextHand1)) {
-                    System.out.println("Winner: " + player2);
-                    player1.lost();
-                    player2.won();
-                }
-                else {
-                    System.out.println("Draw...");
-                    player1.drew();
-                    player2.drew();
-                }
+        for (int i = 0; i < 100; i++) {
+            HandSignal handOfPlayer1 = player1.showHandSignal();
+            HandSignal handOfPlayer2 = player2.showHandSignal();
+            GameResultType resultOfPlayer1;
+            GameResultType resultOfPlayer2;
+            if (handOfPlayer1.isStrongerThan(handOfPlayer2)) {
+                System.out.println("Winner: " + player1);
+                resultOfPlayer1 = Win;
+                resultOfPlayer2 = Loss;
             }
-            System.out.println("RESULT:");
-            System.out.println(player1);
-            System.out.println(player2);
+            else if (handOfPlayer2.isStrongerThan(handOfPlayer1)) {
+                System.out.println("Winner: " + player2);
+                resultOfPlayer1 = Loss;
+                resultOfPlayer2 = Win;
+            }
+            else {
+                System.out.println("Draw...");
+                resultOfPlayer1 = Draw;
+                resultOfPlayer2 = Draw;
+            }
+            player1.notifyGameResult(resultOfPlayer1, handOfPlayer1, handOfPlayer2);
+            player2.notifyGameResult(resultOfPlayer2, handOfPlayer2, handOfPlayer1);
         }
+        System.out.println("RESULT:");
+        System.out.println(player1);
+        System.out.println(player2);
     }
 }
