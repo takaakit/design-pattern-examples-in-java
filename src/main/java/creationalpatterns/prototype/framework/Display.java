@@ -1,7 +1,5 @@
 package creationalpatterns.prototype.framework;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

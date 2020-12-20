@@ -1,7 +1,5 @@
 package structuralpatterns.facade;
 // ˅
-import java.util.*;
-import java.text.*;
 import java.io.IOException;
 import java.io.Writer;
 

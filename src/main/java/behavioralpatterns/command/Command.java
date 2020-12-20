@@ -1,7 +1,5 @@
 package behavioralpatterns.command;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

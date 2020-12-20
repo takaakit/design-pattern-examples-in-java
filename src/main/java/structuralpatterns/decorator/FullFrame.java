@@ -1,7 +1,5 @@
 package structuralpatterns.decorator;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

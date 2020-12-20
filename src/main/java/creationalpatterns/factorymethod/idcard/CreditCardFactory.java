@@ -1,9 +1,9 @@
 package creationalpatterns.factorymethod.idcard;
 // ˅
-import java.util.*;
-import java.text.*;
 import creationalpatterns.factorymethod.framework.Factory;
 import creationalpatterns.factorymethod.framework.Product;
+import java.util.ArrayList;
+import java.util.List;
 
 // ˄
 

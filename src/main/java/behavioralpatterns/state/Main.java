@@ -1,6 +1,5 @@
 package behavioralpatterns.state;
 
-import behavioralpatterns.state.AppSafe;
 import javafx.application.Application;
 
 /*

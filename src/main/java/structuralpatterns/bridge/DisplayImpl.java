@@ -1,7 +1,5 @@
 package structuralpatterns.bridge;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

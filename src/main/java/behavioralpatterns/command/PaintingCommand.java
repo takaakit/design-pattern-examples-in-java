@@ -1,7 +1,5 @@
 package behavioralpatterns.command;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 
@@ -17,7 +15,7 @@ public class PaintingCommand implements Command {
     // Painting position y
     private final double paintingPosY;
 
-    private PaintingTarget paintingTarget;
+    private final PaintingTarget paintingTarget;
 
     PaintingCommand(PaintingTarget paintingObject, double paintingPosX, double paintingPosY) {
         // ˅

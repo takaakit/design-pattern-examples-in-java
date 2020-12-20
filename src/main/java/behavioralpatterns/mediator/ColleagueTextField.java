@@ -1,8 +1,6 @@
 package behavioralpatterns.mediator;
 // ˅
 import javafx.scene.control.TextField;
-import java.util.*;
-import java.text.*;
 
 // ˄
 

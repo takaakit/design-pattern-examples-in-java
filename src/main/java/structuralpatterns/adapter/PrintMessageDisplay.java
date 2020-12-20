@@ -1,7 +1,5 @@
 package structuralpatterns.adapter;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

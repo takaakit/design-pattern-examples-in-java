@@ -1,7 +1,8 @@
 package behavioralpatterns.visitor;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 // ˄
 
@@ -10,7 +11,7 @@ public class Directory extends FileSystemElement {
     
     // ˄
 
-    private String name;
+    private final String name;
 
     // Collection of elements
     private final List<FileSystemElement> elements;

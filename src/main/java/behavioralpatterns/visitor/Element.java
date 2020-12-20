@@ -1,7 +1,5 @@
 package behavioralpatterns.visitor;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

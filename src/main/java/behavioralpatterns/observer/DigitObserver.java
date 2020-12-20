@@ -1,7 +1,5 @@
 package behavioralpatterns.observer;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

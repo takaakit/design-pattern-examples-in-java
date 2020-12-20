@@ -1,7 +1,6 @@
 package behavioralpatterns.interpreter;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.StringTokenizer;
 
 // ˄
 

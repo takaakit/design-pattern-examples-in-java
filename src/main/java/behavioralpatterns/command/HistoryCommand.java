@@ -1,7 +1,6 @@
 package behavioralpatterns.command;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.Stack;
 
 // ˄
 
@@ -24,7 +23,7 @@ public class HistoryCommand implements Command {
     @Override
     public void execute() {
         // ˅
-        pastCommands.forEach(command -> command.execute());
+        pastCommands.forEach(Command::execute);
         // ˄
     }
 

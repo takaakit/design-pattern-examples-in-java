@@ -1,7 +1,6 @@
 package behavioralpatterns.observer;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.Random;
 
 // ˄
 

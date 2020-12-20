@@ -1,7 +1,5 @@
 package behavioralpatterns.iterator;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

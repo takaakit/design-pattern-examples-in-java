@@ -1,10 +1,10 @@
 package creationalpatterns.abstractfactory.factory;
 // ˅
 import java.io.File;
-import java.util.*;
-import java.text.*;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 // ˄
 

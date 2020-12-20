@@ -1,7 +1,5 @@
 package structuralpatterns.proxy;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

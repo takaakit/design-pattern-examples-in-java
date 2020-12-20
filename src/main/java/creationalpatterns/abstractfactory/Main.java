@@ -6,7 +6,6 @@ import creationalpatterns.abstractfactory.factory.Link;
 import creationalpatterns.abstractfactory.factory.Page;
 import creationalpatterns.abstractfactory.listfactory.ListFactory;
 import creationalpatterns.abstractfactory.tablefactory.TableFactory;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

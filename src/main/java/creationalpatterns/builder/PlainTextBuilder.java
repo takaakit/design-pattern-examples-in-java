@@ -1,7 +1,5 @@
 package creationalpatterns.builder;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 
@@ -10,7 +8,7 @@ public class PlainTextBuilder implements Builder {
     
     // ˄
 
-    private StringBuilder builder;
+    private final StringBuilder builder;
 
     public PlainTextBuilder() {
         // ˅

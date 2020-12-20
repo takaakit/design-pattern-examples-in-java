@@ -1,7 +1,5 @@
 package creationalpatterns.prototype;
 // ˅
-import java.util.*;
-import java.text.*;
 import creationalpatterns.prototype.framework.Display;
 
 // ˄

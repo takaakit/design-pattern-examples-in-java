@@ -1,7 +1,5 @@
 package behavioralpatterns.memento;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

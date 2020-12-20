@@ -1,7 +1,5 @@
 package creationalpatterns.abstractfactory.tablefactory;
 // ˅
-import java.util.*;
-import java.text.*;
 import creationalpatterns.abstractfactory.factory.Page;
 
 // ˄

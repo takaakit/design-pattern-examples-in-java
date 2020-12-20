@@ -1,7 +1,7 @@
 package creationalpatterns.abstractfactory.factory;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // ˄
 

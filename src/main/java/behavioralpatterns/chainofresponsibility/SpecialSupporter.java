@@ -1,7 +1,5 @@
 package behavioralpatterns.chainofresponsibility;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

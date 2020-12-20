@@ -1,6 +1,5 @@
 package behavioralpatterns.strategy;
 // ˅
-
 import java.util.Random;
 
 // ˄

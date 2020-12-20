@@ -1,7 +1,5 @@
 package behavioralpatterns.templatemethod;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

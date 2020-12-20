@@ -1,7 +1,5 @@
 package creationalpatterns.abstractfactory.listfactory;
 // ˅
-import java.util.*;
-import java.text.*;
 import creationalpatterns.abstractfactory.factory.Link;
 
 // ˄

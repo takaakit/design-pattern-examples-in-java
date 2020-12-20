@@ -1,7 +1,6 @@
 package behavioralpatterns.visitor;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.Iterator;
 
 // ˄
 

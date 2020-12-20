@@ -1,7 +1,7 @@
 package structuralpatterns.flyweight;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.HashMap;
+import java.util.Map;
 
 // ˄
 

@@ -1,7 +1,5 @@
 package creationalpatterns.builder;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

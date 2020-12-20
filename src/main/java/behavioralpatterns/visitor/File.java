@@ -1,7 +1,5 @@
 package behavioralpatterns.visitor;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 
@@ -10,9 +8,9 @@ public class File extends FileSystemElement {
     
     // ˄
 
-    private String name;
+    private final String name;
 
-    private int size;
+    private final int size;
 
     public File(String name, int size) {
         // ˅

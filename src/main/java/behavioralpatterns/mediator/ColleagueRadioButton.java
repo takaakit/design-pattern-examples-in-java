@@ -1,10 +1,6 @@
 package behavioralpatterns.mediator;
 // ˅
-import java.util.*;
-import java.text.*;
-import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
-import javafx.event.EventHandler;
 
 // ˄
 

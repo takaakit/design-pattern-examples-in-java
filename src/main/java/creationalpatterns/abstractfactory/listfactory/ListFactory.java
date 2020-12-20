@@ -1,9 +1,7 @@
 package creationalpatterns.abstractfactory.listfactory;
 // ˅
-import java.util.*;
-import java.text.*;
-import creationalpatterns.abstractfactory.factory.Factory;
 import creationalpatterns.abstractfactory.factory.Data;
+import creationalpatterns.abstractfactory.factory.Factory;
 import creationalpatterns.abstractfactory.factory.Link;
 import creationalpatterns.abstractfactory.factory.Page;
 

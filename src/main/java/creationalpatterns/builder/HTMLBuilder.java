@@ -1,7 +1,5 @@
 package creationalpatterns.builder;
 // ˅
-import java.util.*;
-import java.text.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;

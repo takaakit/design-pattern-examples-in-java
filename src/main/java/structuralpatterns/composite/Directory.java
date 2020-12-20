@@ -1,7 +1,7 @@
 package structuralpatterns.composite;
 // ˅
-import java.util.*;
-import java.text.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // ˄
 
@@ -10,7 +10,7 @@ public class Directory extends FileSystemElement {
     
     // ˄
 
-    private String name;
+    private final String name;
 
     private final List<FileSystemElement> elements;
 

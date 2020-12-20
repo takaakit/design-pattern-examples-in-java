@@ -1,7 +1,5 @@
 package structuralpatterns.composite;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

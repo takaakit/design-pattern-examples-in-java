@@ -1,7 +1,5 @@
 package creationalpatterns.factorymethod.framework;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

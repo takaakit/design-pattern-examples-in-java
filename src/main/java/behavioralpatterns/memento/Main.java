@@ -8,11 +8,6 @@ A dice game in which money increases and decreases:
 * The game is repeated.
  */
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Gamer gamer = new Gamer(100);           // The initial money is 100

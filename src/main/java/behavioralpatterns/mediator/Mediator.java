@@ -1,7 +1,5 @@
 package behavioralpatterns.mediator;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 

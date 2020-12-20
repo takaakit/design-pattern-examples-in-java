@@ -1,7 +1,5 @@
 package creationalpatterns.factorymethod.idcard;
 // ˅
-import java.util.*;
-import java.text.*;
 import creationalpatterns.factorymethod.framework.Product;
 
 // ˄
