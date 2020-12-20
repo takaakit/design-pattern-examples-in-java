@@ -1,9 +1,8 @@
 package creationalpatterns.builder;
 
-import creationalpatterns.abstractfactory.factory.Factory;
-import structuralpatterns.adapter.Print;
-import structuralpatterns.bridge.Display;
-import structuralpatterns.bridge.MultiLineDisplay;
+import java.io.File;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /*
 Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
@@ -11,30 +10,28 @@ Create documents in HTML format and text format. It is possible to create differ
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length != 1) {
-            showUsage();
-        }
-        else if (args[0].equals("plain")) {
+        System.out.println("Please enter \"plain\" or \"html\":");
+        Scanner scan = new Scanner(System.in);
+        String inputValue = scan.next();
+
+        if (inputValue.equals("plain")) {
             PlainTextBuilder plainTextBuilder = new PlainTextBuilder();
             Director director = new Director(plainTextBuilder);
             director.build();
             String content = plainTextBuilder.getResult();
             System.out.println(content);
         }
-        else if (args[0].equals("html")) {
+        else if (inputValue.equals("html")) {
             HTMLBuilder htmlBuilder = new HTMLBuilder();
             Director director = new Director(htmlBuilder);
             director.build();
-            String filename = htmlBuilder.getResult();
-            System.out.println(filename + " has been created.");
+            String fileName = htmlBuilder.getResult();
+            System.out.println(fileName + " has been created.");
+            System.out.println("Output File: " + new File(new File(".").getAbsoluteFile().getParent(), fileName).getPath());
         }
         else {
-            showUsage();
+            System.err.println("The value is not \"plain\" or \"html\".");
+            System.exit(-1);
         }
-    }
-
-    private static void showUsage() {
-        System.out.println("Usage 1: java Main plain      <- Create a document in plain text.");
-        System.out.println("Usage 2: java Main html       <- Create a document in HTML.");
     }
 }

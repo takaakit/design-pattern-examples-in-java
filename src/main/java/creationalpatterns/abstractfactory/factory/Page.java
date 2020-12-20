@@ -1,5 +1,6 @@
 package creationalpatterns.abstractfactory.factory;
 // ˅
+import java.io.File;
 import java.util.*;
 import java.text.*;
 import java.io.FileWriter;
@@ -44,6 +45,7 @@ public abstract class Page {
             e.printStackTrace();
         }
         System.out.println(fileName + " has been created.");
+        System.out.println("Output File: " + new File(new File(".").getAbsoluteFile().getParent(), fileName).getPath());
         // ˄
     }
 
