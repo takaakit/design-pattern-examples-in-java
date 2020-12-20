@@ -1,5 +1,6 @@
 package structuralpatterns.facade;
 // ˅
+import java.io.File;
 import java.util.*;
 import java.text.*;
 import java.io.FileWriter;
@@ -24,6 +25,7 @@ public class PageCreator {
             writer.mailto(mailAddress, userName);
             writer.close();
             System.out.println(htmlFileName + " is created for " + mailAddress + " (" + userName + ")");
+            System.out.println("Output File: " + new File(new File(".").getAbsoluteFile().getParent(), htmlFileName).getPath());
         } catch (IOException e) {
             e.printStackTrace();
         }
