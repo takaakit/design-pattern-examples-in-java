@@ -19,14 +19,14 @@ public class AppSafe extends Application implements Context {
 
     // ˄
 
-    // Current time
-    private TextField textTime;
+    // Current state
+    private State state;
 
     // Display of security center
     private TextArea textMessage;
 
-    // Current state
-    private State state;
+    // Current time
+    private TextField textTime;
 
     public AppSafe() {
         // ˅
