@@ -42,7 +42,7 @@ public class HistoryCommand implements Command {
         // ˄
     }
 
-    // Delete all past commands.
+    // Delete all past commands
     void clear() {
         // ˅
         pastCommands.clear();

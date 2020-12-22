@@ -17,11 +17,11 @@ public class PaintingCommand implements Command {
 
     private final PaintingTarget paintingTarget;
 
-    PaintingCommand(PaintingTarget paintingObject, double paintingPosX, double paintingPosY) {
+    PaintingCommand(PaintingTarget paintingTarget, double paintingPosX, double paintingPosY) {
         // ˅
         this.paintingPosX = paintingPosX;
         this.paintingPosY = paintingPosY;
-        this.paintingTarget = paintingObject;
+        this.paintingTarget = paintingTarget;
         
         // ˄
     }
