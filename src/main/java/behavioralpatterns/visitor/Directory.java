@@ -55,6 +55,7 @@ public class Directory extends FileSystemElement {
         // ˄
     }
 
+    // Directory size
     @Override
     public int getSize() {
         // ˅

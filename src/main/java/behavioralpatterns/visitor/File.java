@@ -34,6 +34,7 @@ public class File extends FileSystemElement {
         // ˄
     }
 
+    // File size
     @Override
     public int getSize() {
         // ˅

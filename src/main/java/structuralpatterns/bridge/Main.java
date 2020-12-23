@@ -11,6 +11,6 @@ public class Main {
 
         MultiLineDisplay d2 = new MultiLineDisplay(new TextDisplayImpl("The United States of America"));
         d2.output();
-        d2.displayMultiple(3);
+        d2.outputMultiple(3);
     }
 }
