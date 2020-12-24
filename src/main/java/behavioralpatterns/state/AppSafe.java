@@ -55,14 +55,14 @@ public class AppSafe extends Application implements Context {
         textTime = new TextField("");
         textMessage = new TextArea("");
 
-        Button buttonUse = new Button("Use a safe");
-        buttonUse.setOnMouseClicked(e -> state.useSafe(this));    // Safe use button pressed
+        Button buttonUse = new Button("Use");
+        buttonUse.setOnMouseClicked(e -> state.useSafe(this));    // Use button pressed
 
-        Button buttonAlarm = new Button("Sound an emergency bell");
-        buttonAlarm.setOnMouseClicked(e -> state.soundBell(this));    // Emergency bell button pressed
+        Button buttonAlarm = new Button("Alarm");
+        buttonAlarm.setOnMouseClicked(e -> state.soundBell(this));    // Alarm button pressed
 
-        Button buttonPhone = new Button("Make a call");
-        buttonPhone.setOnMouseClicked(e -> state.call(this));        // Normal call button pressed
+        Button buttonPhone = new Button("Phone");
+        buttonPhone.setOnMouseClicked(e -> state.call(this));    // Phone button pressed
 
         Button buttonExit = new Button("Exit");
         buttonExit.setOnMouseClicked(e -> System.exit(0));        // Exit button pressed

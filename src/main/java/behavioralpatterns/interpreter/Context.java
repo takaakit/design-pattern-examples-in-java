@@ -14,9 +14,9 @@ public class Context {
 
     private String currentToken;
 
-    public Context(String text) {
+    public Context(String line) {
         // ˅
-        this.tokenizer = new StringTokenizer(text);
+        this.tokenizer = new StringTokenizer(line);
         this.currentToken = null;
         nextToken();
         // ˄
