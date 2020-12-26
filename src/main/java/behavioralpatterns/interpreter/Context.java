@@ -22,7 +22,7 @@ public class Context {
         // ˄
     }
 
-    String nextToken() {
+    public String nextToken() {
         // ˅
         if (tokenizer.hasMoreTokens()) {
             currentToken = tokenizer.nextToken();
@@ -34,13 +34,13 @@ public class Context {
         // ˄
     }
 
-    String getToken() {
+    public String getToken() {
         // ˅
         return currentToken;
         // ˄
     }
 
-    void slideToken(String token) throws Exception {
+    public void slideToken(String token) throws Exception {
         // ˅
         if (!token.equals(currentToken)) {
             throw new Exception("WARNING: " + token + " is expected but " + currentToken + " was found.");

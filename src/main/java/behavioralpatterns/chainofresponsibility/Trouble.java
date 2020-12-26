@@ -9,9 +9,9 @@ public class Trouble {
     // ˄
 
     // Trouble number
-    final int id;
+    public final int id;
 
-    Trouble(int id) {
+    public Trouble(int id) {
         // ˅
         this.id = id;
         

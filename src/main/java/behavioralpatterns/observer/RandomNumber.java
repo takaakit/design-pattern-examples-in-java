@@ -23,19 +23,19 @@ public class RandomNumber extends Number {
     }
 
     @Override
-    public int getValue() {
-        // ˅
-        return value;
-        // ˄
-    }
-
-    @Override
     public void generate() {
         // ˅
         for (int i = 0; i < 20; i++) {
             value = random.nextInt(50);
             notifyObservers();
         }
+        // ˄
+    }
+
+    @Override
+    public int getValue() {
+        // ˅
+        return value;
         // ˄
     }
 

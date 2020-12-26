@@ -24,7 +24,7 @@ public abstract class Number {
 
     public abstract int getValue();
 
-    void addObserver(Observer observer) {
+    public void addObserver(Observer observer) {
         // ˅
         observers.add(observer);
         // ˄
@@ -36,7 +36,7 @@ public abstract class Number {
         // ˄
     }
 
-    void notifyObservers() {
+    public void notifyObservers() {
         // ˅
         observers.forEach(observer -> observer.update(this));
         // ˄

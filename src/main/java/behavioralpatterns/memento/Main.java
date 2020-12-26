@@ -19,14 +19,14 @@ public class Main {
             gamer.play();                           // Play a game
 
             // Determine the behavior of the Memento
-            if (gamer.money > memento.money) {
+            if (gamer.getMoney() > memento.getMoney()) {
                 System.out.println("(Gamers' money is the highest ever, so record the current state.)");
                 memento = gamer.createMemento();
             }
-            else if (gamer.money < memento.money / 2) {
+            else if (gamer.getMoney() < memento.getMoney() / 2) {
                 System.out.println("(Gamer's money is less than half of the highest amount, so return to the recorded state.)");
                 gamer.restoreMemento(memento);
-                System.out.println("Gamer's money returns to " + gamer.money + ".");
+                System.out.println("Gamer's money returns to " + gamer.getMoney() + ".");
             }
 
             try {

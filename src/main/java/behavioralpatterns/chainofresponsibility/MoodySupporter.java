@@ -8,7 +8,7 @@ public class MoodySupporter extends Supporter {
     
     // ˄
 
-    MoodySupporter(String name) {
+    public MoodySupporter(String name) {
         // ˅
         super(name);
         // ˄
@@ -16,7 +16,7 @@ public class MoodySupporter extends Supporter {
 
     // Troubles with an odd ID are handled.
     @Override
-    protected boolean handle(Trouble trouble) {
+    public boolean canHandle(Trouble trouble) {
         // ˅
         return trouble.id % 2 == 1;
         // ˄

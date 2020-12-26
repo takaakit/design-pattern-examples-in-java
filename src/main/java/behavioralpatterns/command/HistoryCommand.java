@@ -13,7 +13,7 @@ public class HistoryCommand implements Command {
     // A set of past commands
     private final Stack<Command> pastCommands;
 
-    HistoryCommand() {
+    public HistoryCommand() {
         // ˅
         this.pastCommands = new Stack<Command>();
         
@@ -34,7 +34,7 @@ public class HistoryCommand implements Command {
     }
 
     // Delete the last command
-    void undo() {
+    public void undo() {
         // ˅
         if (!pastCommands.isEmpty()) {
             pastCommands.pop();
@@ -43,7 +43,7 @@ public class HistoryCommand implements Command {
     }
 
     // Delete all past commands
-    void clear() {
+    public void clear() {
         // ˅
         pastCommands.clear();
         // ˄

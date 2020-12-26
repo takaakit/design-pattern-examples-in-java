@@ -8,7 +8,7 @@ public class LazySupporter extends Supporter {
     
     // ˄
 
-    LazySupporter(String name) {
+    public LazySupporter(String name) {
         // ˅
         super(name);
         // ˄
@@ -16,7 +16,7 @@ public class LazySupporter extends Supporter {
 
     // No troubles are handled.
     @Override
-    protected boolean handle(Trouble trouble) {
+    public boolean canHandle(Trouble trouble) {
         // ˅
         return false;
         // ˄

@@ -17,14 +17,14 @@ public class Main {
             PlainTextBuilder plainTextBuilder = new PlainTextBuilder();
             Director director = new Director(plainTextBuilder);
             director.build();
-            String content = plainTextBuilder.getResult();
+            String content = plainTextBuilder.getContent();
             System.out.println(content);
         }
         else if (inputValue.equals("html")) {
             HTMLBuilder htmlBuilder = new HTMLBuilder();
             Director director = new Director(htmlBuilder);
             director.build();
-            String fileName = htmlBuilder.getResult();
+            String fileName = htmlBuilder.getFileName();
             System.out.println(fileName + " has been created.");
             System.out.println("Output File: " + new File(new File(".").getAbsoluteFile().getParent(), fileName).getPath());
         }

@@ -9,7 +9,7 @@ public class ListLink extends Link {
     
     // ˄
 
-    ListLink(String name, String url) {
+    public ListLink(String name, String url) {
         // ˅
         super(name, url);
         // ˄

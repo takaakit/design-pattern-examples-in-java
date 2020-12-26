@@ -30,14 +30,14 @@ public class Player {
     }
 
     // Show a hand signal from the strategy.
-    HandSignal showHandSignal() {
+    public HandSignal showHandSignal() {
         // ˅
         return strategy.showHandSignal();
         // ˄
     }
 
     // Notify a game result.
-    void notifyGameResult(GameResultType result, HandSignal ownHand, HandSignal opponentsHand) {
+    public void notifyGameResult(GameResultType result, HandSignal ownHand, HandSignal opponentsHand) {
         // ˅
         switch (result) {
             case Win:

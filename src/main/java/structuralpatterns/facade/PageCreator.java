@@ -12,7 +12,7 @@ public class PageCreator {
     
     // ˄
 
-    static void createSimpleHomepage(String mailAddress, String htmlFileName) {
+    public static void createSimpleHomepage(String mailAddress, String htmlFileName) {
         // ˅
         Properties addressBook = DataLibrary.getProperties("src/main/java/structuralpatterns/facade/addressbook.txt");
         String userName = addressBook.getProperty(mailAddress);

@@ -8,7 +8,7 @@ public class PrintMessageDisplay extends MessageDisplay implements Print {
     
     // ˄
 
-    PrintMessageDisplay(String message) {
+    public PrintMessageDisplay(String message) {
         // ˅
         super(message);
         // ˄

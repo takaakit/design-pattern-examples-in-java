@@ -10,7 +10,7 @@ public class CharDisplay extends AbstractDisplay {
 
     private final char charValue;
 
-    CharDisplay(char charValue) {
+    public CharDisplay(char charValue) {
         // ˅
         this.charValue = charValue;
         

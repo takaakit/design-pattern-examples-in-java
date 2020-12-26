@@ -21,16 +21,16 @@ public class PrinterProxy implements Printer {
         // ˄
     }
 
-    String getPrinterName() {
+    public String getPrinterName() {
         // ˅
         return currentName;
         // ˄
     }
 
-    void setPrinterName(String value) {
+    public void setPrinterName(String value) {
         // ˅
         if (real != null) {
-            real.printerName = value;
+            real.setPrinterName(value);
         }
         this.currentName = value;
         // ˄
@@ -39,17 +39,10 @@ public class PrinterProxy implements Printer {
     @Override
     public void output(String content) {
         // ˅
-        createPrinter();
-        real.output(content);
-        // ˄
-    }
-
-    // Create an actual printer
-    private void createPrinter() {
-        // ˅
         if (real == null) {
             real = new RealPrinter(currentName);
         }
+        real.output(content);
         // ˄
     }
 

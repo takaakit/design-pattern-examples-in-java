@@ -23,7 +23,7 @@ public class BookShelfIterator implements Iterator {
     @Override
     public boolean hasNext() {
         // ˅
-        return index < bookShelf.numberOfBooks;
+        return index < bookShelf.getNumberOfBooks();
         // ˄
     }
 

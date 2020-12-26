@@ -10,12 +10,12 @@ public class Gamer {
     // ˄
 
     // Gamer's money
-    int money;
+    private int money;
 
     // Random number generator
     private final Random random;
 
-    Gamer(int money) {
+    public Gamer(int money) {
         // ˅
         this.money = money;
         this.random = new Random();
@@ -24,21 +24,21 @@ public class Gamer {
     }
 
     // Get current status
-    Memento createMemento() {
+    public Memento createMemento() {
         // ˅
         return new Memento(money);
         // ˄
     }
 
     // Undo status
-    void restoreMemento(Memento memento) {
+    public void restoreMemento(Memento memento) {
         // ˅
-        this.money = memento.money;
+        this.money = memento.getMoney();
         // ˄
     }
 
     // Play a game
-    void play() {
+    public void play() {
         // ˅
         int dice = random.nextInt(6) + 1;    // Shake a dice
         System.out.println("The number of dice is " + dice + ".");
@@ -64,6 +64,12 @@ public class Gamer {
             System.err.println("Unexpected value.");
             System.exit(-1);
         }
+        // ˄
+    }
+
+    public int getMoney() {
+        // ˅
+        return money;
         // ˄
     }
 

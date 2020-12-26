@@ -9,7 +9,7 @@ public class TableLink extends Link {
     
     // ˄
 
-    TableLink(String name, String url) {
+    public TableLink(String name, String url) {
         // ˅
         super(name, url);
         // ˄

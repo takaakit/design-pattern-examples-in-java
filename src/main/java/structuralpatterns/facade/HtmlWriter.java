@@ -12,7 +12,7 @@ public class HtmlWriter {
 
     private final Writer writer;
 
-    public HtmlWriter(Writer writer) {
+    HtmlWriter(Writer writer) {
         // ˅
         this.writer = writer;
         
@@ -36,13 +36,6 @@ public class HtmlWriter {
         // ˄
     }
 
-    // Write a link
-    private void anchor(String url, String text) throws IOException {
-        // ˅
-        paragraph("<a href=\"" + url + "\">" + text + "</a>");
-        // ˄
-    }
-
     // Write a mail address
     void mailto(String mailAddress, String userName) throws IOException {
         // ˅
@@ -50,11 +43,18 @@ public class HtmlWriter {
         // ˄
     }
 
-    public void close() throws IOException {
+    void close() throws IOException {
         // ˅
         writer.write("</body>");
         writer.write("</html>\n");
         writer.close();
+        // ˄
+    }
+
+    // Write a link
+    private void anchor(String url, String text) throws IOException {
+        // ˅
+        paragraph("<a href=\"" + url + "\">" + text + "</a>");
         // ˄
     }
 

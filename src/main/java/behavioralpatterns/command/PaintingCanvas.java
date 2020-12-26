@@ -15,7 +15,7 @@ public class PaintingCanvas extends Canvas implements PaintingTarget {
     // Radius of the painting point
     private final double pointRadius;
 
-    PaintingCanvas(double width, double height) {
+    public PaintingCanvas(double width, double height) {
         // ˅
         setWidth(width);
         setHeight(height);

@@ -9,12 +9,18 @@ public class Memento {
     // ˄
 
     // Money
-    int money;
+    private int money;
 
-    Memento(int money) {
+    public Memento(int money) {
         // ˅
         this.money = money;
 
+        // ˄
+    }
+
+    public int getMoney() {
+        // ˅
+        return money;
         // ˄
     }
 

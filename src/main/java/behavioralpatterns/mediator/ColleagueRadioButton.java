@@ -11,7 +11,7 @@ public class ColleagueRadioButton extends RadioButton implements Colleague {
 
     private Mediator mediator;
 
-    ColleagueRadioButton(String caption) {
+    public ColleagueRadioButton(String caption) {
         // ˅
         super(caption);
         this.mediator = null;

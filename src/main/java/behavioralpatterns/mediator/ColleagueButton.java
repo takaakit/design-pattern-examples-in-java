@@ -11,7 +11,7 @@ public class ColleagueButton extends Button implements Colleague {
 
     private Mediator mediator;
 
-    ColleagueButton(String caption) {
+    public ColleagueButton(String caption) {
         // ˅
         super(caption);
         this.mediator = null;

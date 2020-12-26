@@ -12,21 +12,15 @@ public class HTMLBuilder implements Builder {
     // ˄
 
     // File name to create
-    private String result;
+    private String fileName;
 
     private PrintWriter writer;
 
     public HTMLBuilder() {
         // ˅
-        this.result = null;
+        this.fileName = null;
         this.writer = null;
         
-        // ˄
-    }
-
-    String getResult() {
-        // ˅
-        return result;
         // ˄
     }
 
@@ -34,9 +28,9 @@ public class HTMLBuilder implements Builder {
     @Override
     public void createTitle(String title) {
         // ˅
-        result = title + ".html";                     // Set a title as a file name
+        fileName = title + ".html";                     // Set a title as a file name
         try {
-            writer = new PrintWriter(new FileWriter(result));
+            writer = new PrintWriter(new FileWriter(fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,6 +64,12 @@ public class HTMLBuilder implements Builder {
         // ˅
         writer.println("</body></html>");
         writer.close();                         // Close file
+        // ˄
+    }
+
+    public String getFileName() {
+        // ˅
+        return fileName;
         // ˄
     }
 

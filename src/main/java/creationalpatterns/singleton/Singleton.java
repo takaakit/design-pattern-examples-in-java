@@ -8,11 +8,11 @@ public class Singleton {
     
     // ˄
 
-    private static final Singleton ourInstance = new Singleton();
+    private static final Singleton instance = new Singleton();
 
-    static Singleton getInstance() {
+    public static Singleton getInstance() {
         // ˅
-        return ourInstance;
+        return instance;
         // ˄
     }
 

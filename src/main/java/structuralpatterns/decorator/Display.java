@@ -8,13 +8,13 @@ public abstract class Display {
     
     // ˄
 
-    public abstract String getLineText(int row);
-
     // Column width
     public abstract int getColumns();
 
     // Number of rows
     public abstract int getRows();
+
+    public abstract String getLineText(int row);
 
     // Show all
     public void show() {

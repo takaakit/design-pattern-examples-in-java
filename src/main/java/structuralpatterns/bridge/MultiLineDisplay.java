@@ -15,7 +15,7 @@ public class MultiLineDisplay extends Display {
     }
 
     // Repeat display for the specified number of times
-    void outputMultiple(int times) {
+    public void outputMultiple(int times) {
         // ˅
         open();
         for (int i = 0; i < times; i++) {

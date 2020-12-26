@@ -11,7 +11,7 @@ public class SideFrame extends Frame {
     // Decoration character
     private final char frameChar;
 
-    SideFrame(Display display, char frameChar) {
+    public SideFrame(Display display, char frameChar) {
         // ˅
         super(display);
         this.frameChar = frameChar;

@@ -18,7 +18,7 @@ public class Director {
     }
 
     // Construct a document
-    void build() {
+    public void build() {
         // ˅
         builder.createTitle("Greeting");                                                // Title
         builder.createSection("Morning and Afternoon");                                 // Section

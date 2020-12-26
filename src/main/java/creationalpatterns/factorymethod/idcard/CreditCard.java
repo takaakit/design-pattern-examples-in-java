@@ -9,9 +9,9 @@ public class CreditCard implements Product {
     
     // ˄
 
-    final String owner;
+    private final String owner;
 
-    CreditCard(String owner) {
+    public CreditCard(String owner) {
         // ˅
         this.owner = owner;
         System.out.println("Make " + owner + "'s card.");

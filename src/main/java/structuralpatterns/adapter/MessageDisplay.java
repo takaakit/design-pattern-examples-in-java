@@ -17,13 +17,13 @@ public class MessageDisplay {
         // ˄
     }
 
-    void displayWithHyphens() {
+    public void displayWithHyphens() {
         // ˅
         System.out.println("-- " + message + " --");
         // ˄
     }
 
-    void displayWithBrackets() {
+    public void displayWithBrackets() {
         // ˅
         System.out.println("[[ " + message + " ]]");
         // ˄

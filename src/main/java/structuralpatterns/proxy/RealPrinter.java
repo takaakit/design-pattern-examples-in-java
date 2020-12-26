@@ -8,12 +8,18 @@ public class RealPrinter implements Printer {
     
     // ˄
 
-    String printerName;
+    private String printerName;
 
     public RealPrinter(String name) {
         // ˅
         this.printerName = name;
         heavyTask("Creating an instance(" + name + ") of the Printer");
+        // ˄
+    }
+
+    public void setPrinterName(String value) {
+        // ˅
+        this.printerName = value;
         // ˄
     }
 

@@ -11,7 +11,7 @@ public class BookShelf implements Aggregate {
     
     // ˄
 
-    int numberOfBooks;
+    private int numberOfBooks;
 
     private final List<Book> books;
 
@@ -30,7 +30,7 @@ public class BookShelf implements Aggregate {
         // ˄
     }
 
-    Book getAt(int index) {
+    public Book getAt(int index) {
         // ˅
         return books.get(index);
         // ˄
@@ -40,6 +40,12 @@ public class BookShelf implements Aggregate {
         // ˅
         books.set(numberOfBooks, book);
         numberOfBooks++;
+        // ˄
+    }
+
+    public int getNumberOfBooks() {
+        // ˅
+        return numberOfBooks;
         // ˄
     }
 

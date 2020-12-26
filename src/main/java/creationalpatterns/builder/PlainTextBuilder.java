@@ -17,13 +17,6 @@ public class PlainTextBuilder implements Builder {
         // ˄
     }
 
-    // String to output
-    String getResult() {
-        // ˅
-        return builder.toString();
-        // ˄
-    }
-
     // Make a title of plain text
     @Override
     public void createTitle(String title) {
@@ -58,6 +51,13 @@ public class PlainTextBuilder implements Builder {
     public void close() {
         // ˅
         builder.append("--------------------------------\n");     // Decoration line
+        // ˄
+    }
+
+    // String to output
+    public String getContent() {
+        // ˅
+        return builder.toString();
         // ˄
     }
 

@@ -7,9 +7,12 @@ Print on a named printer. Setting and changing the printer name is done by Proxy
 public class Main {
     public static void main(String[] args) {
         PrinterProxy p = new PrinterProxy("PRINTER-A");
-        System.out.println("The current printer is " + p.getPrinterName() + ".");
+        System.out.println("The printer name is " + p.getPrinterName() + ".");
         p.setPrinterName("PRINTER-B");
-        System.out.println("The current printer is " + p.getPrinterName() + ".");
+        System.out.println("The printer name is " + p.getPrinterName() + ".");
+
+        System.out.println("Print start.");
         p.output("Nice to meet you.");
+        System.out.println("Print exit.");
     }
 }

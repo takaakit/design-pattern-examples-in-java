@@ -14,7 +14,7 @@ public abstract class Supporter {
     // Next supporter
     private Supporter next;
 
-    Supporter(String name) {
+    public Supporter(String name) {
         // ˅
         this.name = name;
         this.next = null;
@@ -24,9 +24,9 @@ public abstract class Supporter {
 
     // Trouble support
     // Troubles are sent around.
-    void support(Trouble trouble) {
+    public void support(Trouble trouble) {
         // ˅
-        if (handle(trouble)) {
+        if (canHandle(trouble)) {
             supported(trouble);
         }
         else if (next != null) {
@@ -53,7 +53,7 @@ public abstract class Supporter {
         // ˄
     }
 
-    protected abstract boolean handle(Trouble trouble);
+    public abstract boolean canHandle(Trouble trouble);
 
     // Trouble was supported.
     private void supported(Trouble trouble) {

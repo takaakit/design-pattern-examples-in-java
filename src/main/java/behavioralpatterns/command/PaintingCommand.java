@@ -17,7 +17,7 @@ public class PaintingCommand implements Command {
 
     private final PaintingTarget paintingTarget;
 
-    PaintingCommand(PaintingTarget paintingTarget, double paintingPosX, double paintingPosY) {
+    public PaintingCommand(PaintingTarget paintingTarget, double paintingPosX, double paintingPosY) {
         // ˅
         this.paintingPosX = paintingPosX;
         this.paintingPosY = paintingPosY;

@@ -10,13 +10,13 @@ public class HandSignal {
     // ˄
 
     // Rock
-    static final int ROCK = 0;
+    public static final int ROCK = 0;
 
     // Scissors
-    static final int SCISSORS = 1;
+    public static final int SCISSORS = 1;
 
     // Paper
-    static final int PAPER = 2;
+    public static final int PAPER = 2;
 
     // Hands of rock-scissors-paper
     private static final List<HandSignal> handSignals = Arrays.asList(new HandSignal(ROCK), new HandSignal(SCISSORS), new HandSignal(PAPER));
@@ -25,10 +25,10 @@ public class HandSignal {
     private static final List<String> name = Arrays.asList("Rock", "Scissors", "Paper");
 
     // Values of rock, scissors and paper.
-    final int value;
+    private final int value;
 
     // Get an instance of the hand
-    static HandSignal getHand(int handValue) {
+    public static HandSignal getHand(int handValue) {
         // ˅
         return handSignals.get(handValue);
         // ˄
@@ -42,7 +42,7 @@ public class HandSignal {
     }
 
     // Return true if "this" is stronger than "hand".
-    boolean isStrongerThan(HandSignal hand) {
+    public boolean isStrongerThan(HandSignal hand) {
         // ˅
         return judgeGame(hand) == 1;
         // ˄
