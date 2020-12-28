@@ -25,7 +25,7 @@ public class Main {
             }
             else if (gamer.getMoney() < memento.getMoney() / 2) {
                 System.out.println("(Gamer's money is less than half of the highest amount, so return to the recorded state.)");
-                gamer.restoreMemento(memento);
+                gamer.setMemento(memento);
                 System.out.println("Gamer's money returns to " + gamer.getMoney() + ".");
             }
 

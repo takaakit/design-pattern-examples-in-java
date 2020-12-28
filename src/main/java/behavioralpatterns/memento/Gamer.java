@@ -31,7 +31,7 @@ public class Gamer {
     }
 
     // Undo status
-    public void restoreMemento(Memento memento) {
+    public void setMemento(Memento memento) {
         // ˅
         this.money = memento.getMoney();
         // ˄
