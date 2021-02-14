@@ -9,7 +9,7 @@ public class Program implements Node {
     
     // ˄
 
-    private Node commandList;
+    private CommandList commandList;
 
     public Program() {
         // ˅

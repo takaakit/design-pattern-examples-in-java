@@ -11,7 +11,7 @@ public class Repeat implements Node {
 
     private int number;
 
-    private Node commandList;
+    private CommandList commandList;
 
     public Repeat() {
         // ˅
