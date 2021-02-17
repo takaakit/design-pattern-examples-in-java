@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 
 // ˄
 
-// Analyze the syntax
+// Hold the data which will be interpreted.
 public class Context {
     // ˅
     

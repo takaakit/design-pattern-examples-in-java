@@ -9,7 +9,7 @@ public class Program implements Node {
     
     // ˄
 
-    private CommandList commandList;
+    private Node commandList;
 
     public Program() {
         // ˅
@@ -22,8 +22,11 @@ public class Program implements Node {
     public void parse(Context context) throws Exception {
         // ˅
         context.slideToken("program");
-        commandList = new CommandList();
-        commandList.parse(context);
+
+        CommandList aCommandList = new CommandList();
+        aCommandList.parse(context);
+
+        this.commandList = aCommandList;    // Hold the parsed command list
         // ˄
     }
 

@@ -11,7 +11,7 @@ public class Repeat implements Node {
 
     private int number;
 
-    private CommandList commandList;
+    private Node commandList;
 
     public Repeat() {
         // ˅
@@ -25,10 +25,14 @@ public class Repeat implements Node {
     public void parse(Context context) throws Exception {
         // ˅
         context.slideToken("repeat");
+
         number = context.getNumber();
-        context.nextToken();
-        commandList = new CommandList();
-        commandList.parse(context);
+        context.slideToken(Integer.toString(number));
+
+        CommandList aCommandList = new CommandList();
+        aCommandList.parse(context);
+
+        this.commandList = aCommandList;    // Hold the parsed command list
         // ˄
     }
 

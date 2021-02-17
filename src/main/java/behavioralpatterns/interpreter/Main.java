@@ -40,10 +40,10 @@ public class Main {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/behavioralPatterns/interpreter/program.txt"))) {
             String text;
             while ((text = reader.readLine()) != null) {
-                System.out.println("Before : \"" + text + "\"");
+                System.out.println("Before parsing : " + text);
                 Node node = new Program();
                 node.parse(new Context(text));
-                System.out.println("After  : " + node);
+                System.out.println("After parsing  : " + node);
             }
         } catch (Exception e) {
             e.printStackTrace();

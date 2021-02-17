@@ -20,14 +20,17 @@ public class Command implements Node {
     @Override
     public void parse(Context context) throws Exception {
         // ˅
+        Node aNode;
         if (context.getToken().equals("repeat")) {
-            node = new Repeat();
-            node.parse(context);
+            aNode = new Repeat();
+            aNode.parse(context);
         }
         else {
-            node = new Action();
-            node.parse(context);
+            aNode = new Action();
+            aNode.parse(context);
         }
+
+        node = aNode;   // Hold the parsed node
         // ˄
     }
 

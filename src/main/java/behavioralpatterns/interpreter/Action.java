@@ -21,11 +21,14 @@ public class Action implements Node {
     @Override
     public void parse(Context context) throws Exception {
         // ˅
-        name = context.getToken();
-        context.slideToken(name);
-        if (!name.equals("forward") && !name.equals("right") && !name.equals("left")) {
-            throw new Exception(name + " is unknown");
+        String currentToken = context.getToken();
+        if (!currentToken.equals("forward") && !currentToken.equals("right") && !currentToken.equals("left")) {
+            throw new Exception(currentToken + " is unknown");
         }
+
+        name = currentToken;    // Hold the current token as this action name
+
+        context.slideToken(currentToken);
         // ˄
     }
 
