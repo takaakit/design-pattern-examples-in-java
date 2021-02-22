@@ -56,16 +56,16 @@ public class AppSafe extends Application implements Context {
         textMessage = new TextArea("");
 
         Button buttonUse = new Button("Use");
-        buttonUse.setOnMouseClicked(e -> state.useSafe(this));    // Use button pressed
+        buttonUse.setOnMouseClicked(e -> useSafe());        // Use button pressed
 
         Button buttonAlarm = new Button("Alarm");
-        buttonAlarm.setOnMouseClicked(e -> state.soundBell(this));    // Alarm button pressed
+        buttonAlarm.setOnMouseClicked(e -> soundBell());    // Alarm button pressed
 
         Button buttonPhone = new Button("Phone");
-        buttonPhone.setOnMouseClicked(e -> state.call(this));    // Phone button pressed
+        buttonPhone.setOnMouseClicked(e -> call());         // Phone button pressed
 
         Button buttonExit = new Button("Exit");
-        buttonExit.setOnMouseClicked(e -> System.exit(0));        // Exit button pressed
+        buttonExit.setOnMouseClicked(e -> exit());          // Exit button pressed
 
         Pane topPane = new Pane(textTime);
         Pane centerScreen = new Pane(textMessage);
@@ -120,6 +120,30 @@ public class AppSafe extends Application implements Context {
     public void recordSecurityLog(String msg) {
         // ˅
         textMessage.appendText("record ... " + msg + "\n");
+        // ˄
+    }
+
+    private void useSafe() {
+        // ˅
+        state.useSafe(this);
+        // ˄
+    }
+
+    private void soundBell() {
+        // ˅
+        state.soundBell(this);
+        // ˄
+    }
+
+    private void call() {
+        // ˅
+        state.call(this);
+        // ˄
+    }
+
+    private void exit() {
+        // ˅
+        System.exit(0);
         // ˄
     }
 

@@ -32,21 +32,6 @@ public class Directory extends FileSystemElement {
         // ˄
     }
 
-    // Add an entry
-    public FileSystemElement add(FileSystemElement element) {
-        // ˅
-        elements.add(element);
-        return this;
-        // ˄
-    }
-
-    // Create a iterator
-    public Iterator<FileSystemElement> iterator() {
-        // ˅
-        return elements.iterator();
-        // ˄
-    }
-
     // Directory name
     @Override
     public String getName() {
@@ -64,6 +49,21 @@ public class Directory extends FileSystemElement {
             size += element.getSize();
         }
         return size;
+        // ˄
+    }
+
+    // Add an entry
+    public FileSystemElement add(FileSystemElement element) {
+        // ˅
+        elements.add(element);
+        return this;
+        // ˄
+    }
+
+    // Create a iterator
+    public Iterator<FileSystemElement> iterator() {
+        // ˅
+        return elements.iterator();
         // ˄
     }
 

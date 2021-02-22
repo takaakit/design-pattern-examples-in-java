@@ -29,13 +29,13 @@ public class Main {
                 System.out.println("Gamer's money returns to " + gamer.getMoney() + ".");
             }
 
+            System.out.println();
+
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-            System.out.println();
         }
     }
 }

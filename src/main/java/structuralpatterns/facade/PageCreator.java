@@ -16,6 +16,7 @@ public class PageCreator {
         // ˅
         Properties addressBook = DataLibrary.getProperties("src/main/java/structuralpatterns/facade/addressbook.txt");
         String userName = addressBook.getProperty(mailAddress);
+        
         try {
             HtmlWriter writer = new HtmlWriter(new FileWriter(htmlFileName));
             writer.heading(userName + "'s homepage");

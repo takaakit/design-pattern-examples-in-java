@@ -7,10 +7,8 @@ Observers observe objects generating a numerical value and display the value. Th
 public class Main {
     public static void main(String[] args) {
         RandomNumber number = new RandomNumber();
-        Observer digitObserver = new DigitObserver();
-        number.addObserver(digitObserver);
-        Observer barChartObserver = new BarChartObserver();
-        number.addObserver(barChartObserver);
+        number.addObserver(new DigitObserver());
+        number.addObserver(new BarChartObserver());
         number.generate();
     }
 }
