@@ -52,7 +52,7 @@ public class Directory extends FileSystemElement {
         // ˄
     }
 
-    // Add an entry
+    // Add an element
     public FileSystemElement add(FileSystemElement element) {
         // ˅
         elements.add(element);

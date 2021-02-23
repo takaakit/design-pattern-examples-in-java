@@ -31,10 +31,10 @@ public class CommandList implements Node {
                 break;
             }
             else {
-                Command aCommand = new Command();
-                aCommand.parse(context);
+                Node aNode = new Command();
+                aNode.parse(context);
 
-                nodes.add(aCommand);    // Hold the parsed node
+                nodes.add(aNode);    // Hold the parsed node
             }
         }
         // ˄

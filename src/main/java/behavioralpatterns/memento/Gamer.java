@@ -23,14 +23,12 @@ public class Gamer {
         // ˄
     }
 
-    // Get current status
     public Memento createMemento() {
         // ˅
         return new Memento(money);
         // ˄
     }
 
-    // Undo status
     public void setMemento(Memento memento) {
         // ˅
         this.money = memento.getMoney();
