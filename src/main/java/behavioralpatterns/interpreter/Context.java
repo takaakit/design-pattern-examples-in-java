@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 
 // ˄
 
-// Hold the data which will be interpreted.
+// Hold data which will be interpreted.
 public class Context {
     // ˅
     
