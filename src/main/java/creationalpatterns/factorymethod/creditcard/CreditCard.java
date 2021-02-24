@@ -1,4 +1,4 @@
-package creationalpatterns.factorymethod.idcard;
+package creationalpatterns.factorymethod.creditcard;
 // ˅
 import creationalpatterns.factorymethod.framework.Product;
 

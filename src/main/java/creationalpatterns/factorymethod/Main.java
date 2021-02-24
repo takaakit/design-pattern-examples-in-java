@@ -2,7 +2,7 @@ package creationalpatterns.factorymethod;
 
 import creationalpatterns.factorymethod.framework.Factory;
 import creationalpatterns.factorymethod.framework.Product;
-import creationalpatterns.factorymethod.idcard.CreditCardFactory;
+import creationalpatterns.factorymethod.creditcard.CreditCardFactory;
 
 /*
 The subject is a factory to make credit cards. The abstract class("Factory") defines how to create an credit card, but the actual credit card is created by the concrete class("CreditCardFactory").
