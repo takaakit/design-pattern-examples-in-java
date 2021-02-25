@@ -1,4 +1,4 @@
-![](screenshots/DiagramMap.svg "All Design Patterns")
+![](screenshots/DiagramMap.svg "All diagrams")
 
 Design Pattern Examples in Java
 ===
@@ -62,7 +62,7 @@ Installation
 
 **M PLUS plug-in**
 * Download the plug-in from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-  **Use ver.2.4.0 or higher.**
+  Use **ver.2.4.0** or higher.
 
 **Development Environment for Java and JavaFX**
 * Prepare an arbitrary development environment for Java and JavaFX. If you don't want to install JavaFX, you need to remove the following packages that use JavaFX to prevent build errors.
@@ -72,10 +72,12 @@ Installation
 
 Usage
 -----
-* Select model elements on the model browser of Astah, and press the "Generate code" button to generate.  
-* The generated code has "User Code Area". The "User Code Area" is the area enclosed by "˅" and "˄". Handwritten code written in the "User Code Area" remains after a re-generation.
-* You can run the program from "Main.java" for each Design Pattern.
-* For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin/tips).
+1. Select model elements on the model browser of Astah.
+2. Click the **Generate code** button.  
+   The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation.
+3. Run the program from **Main.java** for each Design Pattern.  
+
+For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin/tips).
 
 ![](screenshots/Usage.gif "Usage")
 
