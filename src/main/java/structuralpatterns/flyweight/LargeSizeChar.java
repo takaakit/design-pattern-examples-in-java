@@ -29,7 +29,7 @@ public class LargeSizeChar {
             displayData = buf.toString();
         }
         catch (IOException e) {
-            displayData = charName + "?\n";
+            displayData = charName + "?";
         }
         
         // ˄
@@ -38,7 +38,7 @@ public class LargeSizeChar {
     // Display the large size character
     public void display() {
         // ˅
-        System.out.print(displayData);
+        System.out.println(displayData);
         // ˄
     }
 

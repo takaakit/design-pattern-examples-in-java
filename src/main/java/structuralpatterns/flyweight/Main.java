@@ -12,7 +12,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         String inputValue = scan.next();
 
-        LargeSizeString bs = new LargeSizeString(inputValue);
-        bs.display();
+        LargeSizeString lss = new LargeSizeString(inputValue);
+        lss.display();
     }
 }
