@@ -16,7 +16,7 @@ public class LargeSizeString {
         // ˅
         this.largeSizeChars = new ArrayList<>();
         for (int i = 0; i < string.length(); i++) {
-            largeSizeChars.add(LargeSizeCharFactory.getLargeSizeChar(string.charAt(i)));
+            largeSizeChars.add(LargeSizeCharFactory.getInstance().getLargeSizeChar(string.charAt(i)));
         }
         // ˄
     }

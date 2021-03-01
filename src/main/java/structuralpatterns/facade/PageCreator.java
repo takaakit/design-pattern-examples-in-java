@@ -12,9 +12,23 @@ public class PageCreator {
     
     // ˄
 
-    public static void createSimpleHomepage(String mailAddress, String htmlFileName) {
+    private static final PageCreator instance = new PageCreator();
+
+    public static PageCreator getInstance() {
         // ˅
-        Properties addressBook = DataLibrary.getProperties("src/main/java/structuralpatterns/facade/addressbook.txt");
+        return instance;
+        // ˄
+    }
+
+    private PageCreator() {
+        // ˅
+        
+        // ˄
+    }
+
+    public void createSimpleHomepage(String mailAddress, String htmlFileName) {
+        // ˅
+        Properties addressBook = DataLibrary.getInstance().getProperties("src/main/java/structuralpatterns/facade/addressbook.txt");
         String userName = addressBook.getProperty(mailAddress);
         
         try {

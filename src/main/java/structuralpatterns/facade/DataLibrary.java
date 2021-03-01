@@ -11,8 +11,22 @@ public class DataLibrary {
     
     // ˄
 
+    private static final DataLibrary instance = new DataLibrary();
+
+    public static DataLibrary getInstance() {
+        // ˅
+        return instance;
+        // ˄
+    }
+
+    private DataLibrary() {
+        // ˅
+        
+        // ˄
+    }
+
     // Read a data library file.
-    static Properties getProperties(String dataLibraryFileName) {
+    Properties getProperties(String dataLibraryFileName) {
         // ˅
         Properties prop = new Properties();
         try {

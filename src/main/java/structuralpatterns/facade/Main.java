@@ -6,6 +6,6 @@ Create a simple homepage through a Facade("PageCreator"). The Facade gets info f
 
 public class Main {
     public static void main(String[] args) {
-        PageCreator.createSimpleHomepage("emily@example.com", "Homepage.html");
+        PageCreator.getInstance().createSimpleHomepage("emily@example.com", "Homepage.html");
     }
 }
