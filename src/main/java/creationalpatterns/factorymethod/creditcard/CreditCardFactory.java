@@ -17,7 +17,7 @@ public class CreditCardFactory extends Factory {
     }
 
     @Override
-    public Product createProduct(String owner) {
+    protected Product createProduct(String owner) {
         // ˅
         return new CreditCard(owner);
         // ˄

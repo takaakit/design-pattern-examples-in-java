@@ -14,7 +14,7 @@ public abstract class Factory {
         // ˄
     }
 
-    public abstract Product createProduct(String owner);
+    protected abstract Product createProduct(String owner);
 
     // ˅
     
