@@ -20,7 +20,7 @@ public class LimitedSupporter extends Supporter {
 
     // Troubles with an ID below the limit are handled.
     @Override
-    public boolean canHandle(Trouble trouble) {
+    protected boolean canHandle(Trouble trouble) {
         // ˅
         return trouble.id <= limitId;
         // ˄

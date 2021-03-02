@@ -53,7 +53,7 @@ public abstract class Supporter {
         // ˄
     }
 
-    public abstract boolean canHandle(Trouble trouble);
+    protected abstract boolean canHandle(Trouble trouble);
 
     // Trouble was supported.
     private void supported(Trouble trouble) {

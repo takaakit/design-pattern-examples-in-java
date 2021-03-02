@@ -16,7 +16,7 @@ public class LazySupporter extends Supporter {
 
     // No troubles are handled.
     @Override
-    public boolean canHandle(Trouble trouble) {
+    protected boolean canHandle(Trouble trouble) {
         // ˅
         return false;
         // ˄

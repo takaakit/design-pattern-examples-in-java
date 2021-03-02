@@ -20,7 +20,7 @@ public class SpecialSupporter extends Supporter {
 
     // Troubles with the specific ID are handled.
     @Override
-    public boolean canHandle(Trouble trouble) {
+    protected boolean canHandle(Trouble trouble) {
         // ˅
         return trouble.id == targetId;
         // ˄
