@@ -3,12 +3,28 @@ package behavioralpatterns.mediator;
 
 // ˄
 
-public interface Colleague {
+public abstract class Colleague {
+    // ˅
+    
+    // ˄
 
-    void setMediator(Mediator mediator);
+    protected Mediator mediator;
+
+    protected Colleague() {
+        // ˅
+        this.mediator = null;
+
+        // ˄
+    }
 
     // Set enable/disable from the Mediator
-    void setActivation(boolean isEnable);
+    public abstract void setActivation(boolean isEnable);
+
+    public void setMediator(Mediator mediator) {
+        // ˅
+        this.mediator = mediator;
+        // ˄
+    }
 
     // ˅
     

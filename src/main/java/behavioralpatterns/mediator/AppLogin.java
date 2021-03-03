@@ -4,8 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -49,29 +48,29 @@ public class AppLogin extends Application implements Mediator {
         createColleagues();
 
         ToggleGroup toggleGroup = new ToggleGroup();
-        radioGuest.setToggleGroup(toggleGroup);
-        radioLogin.setToggleGroup(toggleGroup);
+        radioGuest.getRadioButton().setToggleGroup(toggleGroup);
+        radioLogin.getRadioButton().setToggleGroup(toggleGroup);
 
         // Set a initial state
-        radioGuest.setSelected(true);
+        radioGuest.getRadioButton().setSelected(true);
         textUsername.setActivation(false);
         textPassword.setActivation(false);
         buttonOk.setActivation(true);
         buttonCancel.setActivation(true);
 
         // Create panes
-        HBox checkBoxPane = new HBox(radioGuest, radioLogin);
+        HBox checkBoxPane = new HBox(radioGuest.getRadioButton(), radioLogin.getRadioButton());
         checkBoxPane.setSpacing(5.0);
 
         GridPane textFieldPane = new GridPane();
         textFieldPane.setHgap(5.0);
         textFieldPane.setVgap(2.0);
         textFieldPane.add(new Label("Username:"), 0, 0);
-        textFieldPane.add(textUsername, 1, 0);
+        textFieldPane.add(textUsername.getTextField(), 1, 0);
         textFieldPane.add(new Label("Password:"), 0, 1);
-        textFieldPane.add(textPassword, 1, 1);
+        textFieldPane.add(textPassword.getTextField(), 1, 1);
 
-        HBox bottomPane = new HBox(buttonOk, buttonCancel);
+        HBox bottomPane = new HBox(buttonOk.getButton(), buttonCancel.getButton());
         bottomPane.setSpacing(5.0);
         bottomPane.setAlignment(Pos.CENTER_RIGHT);
 
@@ -101,12 +100,12 @@ public class AppLogin extends Application implements Mediator {
     @Override
     public void createColleagues() {
         // ˅
-        radioGuest = new ColleagueRadioButton("Guest");
-        radioLogin = new ColleagueRadioButton("Login");
-        textUsername = new ColleagueTextField("");
-        textPassword = new ColleagueTextField("");
-        buttonOk = new ColleagueButton("OK");
-        buttonCancel = new ColleagueButton("Cancel");
+        radioGuest = new ColleagueRadioButton(new RadioButton("Guest"));
+        radioLogin = new ColleagueRadioButton(new RadioButton("Login"));
+        textUsername = new ColleagueTextField(new TextField());
+        textPassword = new ColleagueTextField(new PasswordField());
+        buttonOk = new ColleagueButton(new Button("OK"));
+        buttonCancel = new ColleagueButton(new Button("Cancel"));
         // ˄
     }
 
@@ -129,8 +128,8 @@ public class AppLogin extends Application implements Mediator {
                 textPassword.setActivation(true);
 
                 // Judge whether the changed Colleague is enabled or disabled
-                if (!textUsername.getText().isEmpty()
-                        && !textPassword.getText().isEmpty()) {
+                if (!textUsername.isEmpty()
+                        && !textPassword.isEmpty()) {
                     buttonOk.setActivation(true);
                 }
                 else {

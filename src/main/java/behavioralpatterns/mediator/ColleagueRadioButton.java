@@ -4,26 +4,19 @@ import javafx.scene.control.RadioButton;
 
 // ˄
 
-public class ColleagueRadioButton extends RadioButton implements Colleague {
+public class ColleagueRadioButton extends Colleague {
     // ˅
     
     // ˄
 
-    private Mediator mediator;
+    private final RadioButton radioButton;
 
-    public ColleagueRadioButton(String caption) {
+    public ColleagueRadioButton(RadioButton radioButton) {
         // ˅
-        super(caption);
         this.mediator = null;
-        setOnAction(e -> mediator.colleagueChanged());
-        
-        // ˄
-    }
+        this.radioButton = radioButton;
+        this.radioButton.setOnAction(e -> mediator.colleagueChanged());
 
-    @Override
-    public void setMediator(Mediator mediator) {
-        // ˅
-        this.mediator = mediator;
         // ˄
     }
 
@@ -31,7 +24,19 @@ public class ColleagueRadioButton extends RadioButton implements Colleague {
     @Override
     public void setActivation(boolean isEnable) {
         // ˅
-        setDisable(!isEnable);
+        radioButton.setDisable(!isEnable);
+        // ˄
+    }
+
+    public boolean isSelected() {
+        // ˅
+        return radioButton.isSelected();
+        // ˄
+    }
+
+    public RadioButton getRadioButton() {
+        // ˅
+        return radioButton;
         // ˄
     }
 

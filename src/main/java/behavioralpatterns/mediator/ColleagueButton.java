@@ -4,26 +4,19 @@ import javafx.scene.control.Button;
 
 // ˄
 
-public class ColleagueButton extends Button implements Colleague {
+public class ColleagueButton extends Colleague {
     // ˅
     
     // ˄
 
-    private Mediator mediator;
+    private final Button button;
 
-    public ColleagueButton(String caption) {
+    public ColleagueButton(Button button) {
         // ˅
-        super(caption);
         this.mediator = null;
-        setOnMousePressed(e -> mediator.colleagueChanged());
+        this.button = button;
+        this.button.setOnMousePressed(e -> mediator.colleagueChanged());
         
-        // ˄
-    }
-
-    @Override
-    public void setMediator(Mediator mediator) {
-        // ˅
-        this.mediator = mediator;
         // ˄
     }
 
@@ -31,7 +24,19 @@ public class ColleagueButton extends Button implements Colleague {
     @Override
     public void setActivation(boolean isEnable) {
         // ˅
-        setDisable(!isEnable);
+        this.button.setDisable(!isEnable);
+        // ˄
+    }
+
+    public boolean isPressed() {
+        // ˅
+        return button.isPressed();
+        // ˄
+    }
+
+    public Button getButton() {
+        // ˅
+        return button;
         // ˄
     }
 

@@ -4,26 +4,19 @@ import javafx.scene.control.TextField;
 
 // ˄
 
-public class ColleagueTextField extends TextField implements Colleague {
+public class ColleagueTextField extends Colleague {
     // ˅
     
     // ˄
 
-    private Mediator mediator;
+    private final TextField textField;
 
-    public ColleagueTextField(String text) {
+    public ColleagueTextField(TextField textField) {
         // ˅
-        super(text);
         this.mediator = null;
-        setOnKeyReleased(e -> mediator.colleagueChanged());
+        this.textField = textField;
+        this.textField.setOnKeyReleased(e -> mediator.colleagueChanged());
         
-        // ˄
-    }
-
-    @Override
-    public void setMediator(Mediator mediator) {
-        // ˅
-        this.mediator = mediator;
         // ˄
     }
 
@@ -31,7 +24,19 @@ public class ColleagueTextField extends TextField implements Colleague {
     @Override
     public void setActivation(boolean isEnable) {
         // ˅
-        setDisable(!isEnable);
+        this.textField.setDisable(!isEnable);
+        // ˄
+    }
+
+    public boolean isEmpty() {
+        // ˅
+        return textField.getText().isEmpty();
+        // ˄
+    }
+
+    public TextField getTextField() {
+        // ˅
+        return textField;
         // ˄
     }
 
