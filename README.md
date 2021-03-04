@@ -20,8 +20,6 @@ This project is available for the following objectives:
 ```java:File class
 package structuralpatterns.composite;
 // ˅
-import java.util.*;
-import java.text.*;
 
 // ˄
 
@@ -30,10 +28,28 @@ public class File extends FileSystemElement {
     
     // ˄
 
+    private final String name;
+
+    private final int size;
+
     public File(String name, int size) {
         // ˅
         this.name = name;
         this.size = size;
+        // ˄
+    }
+
+    @Override
+    public String getName() {
+        // ˅
+        return name;
+        // ˄
+    }
+
+    @Override
+    public int getSize() {
+        // ˅
+        return size;
         // ˄
     }
 
