@@ -4,7 +4,8 @@ import java.io.File;
 import java.util.Scanner;
 
 /*
-Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+Create documents in HTML format and text format. It is possible to create different documents
+in the same construction process.
  */
 
 public class Main {

@@ -4,7 +4,10 @@ import creationalpatterns.prototype.framework.Display;
 import creationalpatterns.prototype.framework.Manager;
 
 /*
-Display a string enclosed with a frame line, or drawn with an underline. The client("Main") registers instances of the "Display" subclass in the "Manager" class. When necessary, the "Manager" class asks those registered instances to return a clone. The client("Main") requires the returned clones to display.
+Display a string enclosed with a frame line, or drawn with an underline. The Client (Main)
+registers instances of the Display subclass in the Manager class. When necessary,
+the Manager class asks those registered instances to return a clone. The Client (Main)
+requires the returned clones to display.
  */
 
 public class Main {

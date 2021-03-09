@@ -1,7 +1,8 @@
 package structuralpatterns.facade;
 
 /*
-Create a simple homepage through a Facade("PageCreator"). The Facade gets info from the "DataLibrary" and uses the info to create an HTML file.
+Create a simple homepage through a Facade (PageCreator). The Facade gets info from
+the DataLibrary and uses the info to create an HTML file.
  */
 
 public class Main {

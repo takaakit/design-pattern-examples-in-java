@@ -1,7 +1,8 @@
 package structuralpatterns.proxy;
 
 /*
-Print on a named printer. Setting and changing the printer name is done by Proxy("PrinterProxy"). At the time of printing, create an instance of the RealSubject("RealPrinter") for the first time.
+Print on a named printer. Setting and changing the printer name is done by Proxy (PrinterProxy).
+At the time of printing, create an instance of the RealSubject (RealPrinter) for the first time.
  */
 
 public class Main {
