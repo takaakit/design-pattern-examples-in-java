@@ -26,7 +26,7 @@ public class Action implements Node {
             throw new Exception(currentToken + " is unknown");
         }
 
-        name = currentToken;    // Hold the current token as this action name
+        this.name = currentToken;    // Hold the current token as this action name
 
         context.slideToken(currentToken);
         // ˄

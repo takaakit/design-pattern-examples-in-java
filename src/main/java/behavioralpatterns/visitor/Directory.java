@@ -60,7 +60,7 @@ public class Directory extends FileSystemElement {
         // ˄
     }
 
-    // Create a iterator
+    // Get the iterator
     public Iterator<FileSystemElement> iterator() {
         // ˅
         return elements.iterator();

@@ -30,7 +30,7 @@ public class Command implements Node {
             aNode.parse(context);
         }
 
-        node = aNode;   // Hold the parsed node
+        this.node = aNode;   // Hold the parsed node
         // ˄
     }
 
