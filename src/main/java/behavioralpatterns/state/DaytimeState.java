@@ -8,12 +8,26 @@ public class DaytimeState implements State {
     
     // ˄
 
+    private static DaytimeState instance = new DaytimeState();
+
+    public static DaytimeState getInstance() {
+        // ˅
+        return instance;
+        // ˄
+    }
+
+    private DaytimeState() {
+        // ˅
+        
+        // ˄
+    }
+
     // Set time
     @Override
     public void setTime(Context context, int hour) {
         // ˅
         if (hour < 9 || 17 <= hour) {
-            context.changeState(new NightState());
+            context.changeState(NightState.getInstance());
         }
         // ˄
     }

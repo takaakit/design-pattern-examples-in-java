@@ -32,7 +32,7 @@ public class AppSafe extends Application implements Context {
         // ˅
         this.textTime = null;
         this.textMessage = null;
-        this.state = new DaytimeState();
+        this.state = DaytimeState.getInstance();
 
         new Thread(() -> {
             while (true) {
