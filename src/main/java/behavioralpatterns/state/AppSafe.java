@@ -93,11 +93,13 @@ public class AppSafe extends Application implements Context {
         else {
             currentTime += hour + ":00";
         }
+    	
         System.out.println(currentTime);
         if (textTime != null) {
             textTime.setText(currentTime);
         }
-        state.setTime(this, hour);
+        
+    	state.setTime(this, hour);
         // ˄
     }
 

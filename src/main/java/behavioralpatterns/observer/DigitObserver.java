@@ -3,7 +3,7 @@ package behavioralpatterns.observer;
 
 // ˄
 
-// Display values with digits.
+// Display values as a number.
 public class DigitObserver implements Observer {
     // ˅
     

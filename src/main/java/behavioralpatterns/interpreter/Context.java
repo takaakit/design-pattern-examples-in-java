@@ -51,15 +51,12 @@ public class Context {
 
     public int getNumber() throws Exception {
         // ˅
-        int number;
         try {
-            number = Integer.parseInt(currentToken);
+            return Integer.parseInt(currentToken);
         }
         catch (NumberFormatException e) {
             throw new Exception("WARNING: " + e);
         }
-
-        return number;
         // ˄
     }
 

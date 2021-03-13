@@ -3,7 +3,7 @@ package behavioralpatterns.observer;
 
 // ˄
 
-// Display values with a bar chart.
+// Display values as a bar chart.
 public class BarChartObserver implements Observer {
     // ˅
     
