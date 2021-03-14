@@ -11,10 +11,13 @@ public abstract class Number {
     
     // ˄
 
+    protected int value;
+
     private final List<Observer> observers;
 
     public Number() {
         // ˅
+        this.value = 0;
         this.observers = new ArrayList<>();
         
         // ˄
@@ -22,15 +25,13 @@ public abstract class Number {
 
     public abstract void generate();
 
-    public abstract int getValue();
-
     public void addObserver(Observer observer) {
         // ˅
         observers.add(observer);
         // ˄
     }
 
-    public void deleteObserver(Observer observer) {
+    public void removeObserver(Observer observer) {
         // ˅
         observers.remove(observer);
         // ˄
@@ -39,6 +40,12 @@ public abstract class Number {
     public void notifyObservers() {
         // ˅
         observers.forEach(observer -> observer.update(this));
+        // ˄
+    }
+
+    public int getValue() {
+        // ˅
+        return value;
         // ˄
     }
 

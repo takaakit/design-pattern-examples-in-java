@@ -10,13 +10,10 @@ public class RandomNumber extends Number {
     
     // ˄
 
-    private int value;
-
     private final Random random;
 
     public RandomNumber() {
         // ˅
-        this.value = 0;
         this.random = new Random();
         
         // ˄
@@ -29,13 +26,6 @@ public class RandomNumber extends Number {
             value = random.nextInt(50);
             notifyObservers();
         }
-        // ˄
-    }
-
-    @Override
-    public int getValue() {
-        // ˅
-        return value;
         // ˄
     }
 
