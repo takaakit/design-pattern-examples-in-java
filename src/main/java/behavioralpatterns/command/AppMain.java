@@ -31,13 +31,13 @@ public class AppMain extends Application {
     public void start(Stage primaryStage) {
         // ˅
         // Create buttons
-        Button clearButton = new Button("clear");
+        Button clearButton = new Button("Clear");
         clearButton.setOnMousePressed(e -> {
             canvas.clear();
             history.clear();
         });
 
-        Button undoButton = new Button("undo");
+        Button undoButton = new Button("Undo");
         undoButton.setOnMousePressed(e -> {
             canvas.clear();
             history.undo();
