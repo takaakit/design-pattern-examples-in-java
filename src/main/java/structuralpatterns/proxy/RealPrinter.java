@@ -13,7 +13,7 @@ public class RealPrinter implements Printer {
     public RealPrinter(String name) {
         // ˅
         this.printerName = name;
-        heavyTask("Creating an instance(" + name + ") of the Printer");
+        heavyTask("Creating an instance (" + name + ") of the Printer");
         // ˄
     }
 
