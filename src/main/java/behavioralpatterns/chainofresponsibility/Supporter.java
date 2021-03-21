@@ -46,19 +46,12 @@ public abstract class Supporter {
         // ˄
     }
 
-    @Override
-    public String toString() {
-        // ˅
-        return "[" + name + "]";
-        // ˄
-    }
-
     protected abstract boolean canHandle(Trouble trouble);
 
     // Trouble was supported.
     private void supported(Trouble trouble) {
         // ˅
-        System.out.println(trouble.toString() + " was handled by " + this + ".");
+        System.out.println(trouble + " was handled by " + name + ".");
         // ˄
     }
 

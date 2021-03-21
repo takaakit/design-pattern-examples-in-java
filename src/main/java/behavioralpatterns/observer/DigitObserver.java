@@ -9,14 +9,19 @@ public class DigitObserver implements Observer {
     
     // ˄
 
-    @Override
-    public void update(Number number) {
+    private NumberSubject numberSubject;
+
+    public DigitObserver(NumberSubject numberSubject) {
         // ˅
-        System.out.println("Digit    : " + number.getValue());
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        this.numberSubject = numberSubject;
+        // ˄
+    }
+
+    @Override
+    public void update(Subject changedSubject) {
+        // ˅
+        if (changedSubject.equals(this.numberSubject)) {
+            System.out.println("Digit    : " + this.numberSubject.getValue());
         }
         // ˄
     }

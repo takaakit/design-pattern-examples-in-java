@@ -9,18 +9,23 @@ public class BarChartObserver implements Observer {
     
     // ˄
 
-    @Override
-    public void update(Number number) {
+    private NumberSubject numberSubject;
+
+    public BarChartObserver(NumberSubject numberSubject) {
         // ˅
-        System.out.print("Bar chart: ");
-        for (int i = 0; i < number.getValue(); i++) {
-            System.out.print("*");
-        }
-        System.out.println();
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        this.numberSubject = numberSubject;
+        // ˄
+    }
+
+    @Override
+    public void update(Subject changedSubject) {
+        // ˅
+        if (changedSubject.equals(this.numberSubject)) {
+            System.out.print("Bar chart: ");
+            for (int i = 0; i < this.numberSubject.getValue(); i++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
         // ˄
     }
