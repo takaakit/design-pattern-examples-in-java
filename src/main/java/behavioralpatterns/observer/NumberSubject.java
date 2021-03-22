@@ -4,7 +4,6 @@ import java.util.Random;
 
 // ˄
 
-// Generate a random number.
 public class NumberSubject extends Subject {
     // ˅
     

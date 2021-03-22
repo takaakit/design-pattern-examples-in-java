@@ -5,7 +5,6 @@ import java.util.List;
 
 // ˄
 
-// An abstract class that generates numbers.
 public class Subject {
     // ˅
     
