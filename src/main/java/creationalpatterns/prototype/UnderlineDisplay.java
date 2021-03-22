@@ -19,7 +19,7 @@ public class UnderlineDisplay implements Display {
     }
 
     @Override
-    public Display createClone() {
+    public Display clone() {
         // ˅
         return new UnderlineDisplay(this.underlineChar);
         // ˄

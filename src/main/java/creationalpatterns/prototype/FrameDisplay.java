@@ -19,7 +19,7 @@ public class FrameDisplay implements Display {
     }
 
     @Override
-    public Display createClone() {
+    public Display clone() {
         // ˅
         return new FrameDisplay(this.borderChar);
         // ˄
