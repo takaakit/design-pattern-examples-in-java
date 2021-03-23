@@ -8,18 +8,24 @@ public class RealPrinter implements Printer {
     
     // ˄
 
-    private String printerName;
+    private String name;
 
     public RealPrinter(String name) {
         // ˅
-        this.printerName = name;
+        this.name = name;
         heavyTask("Creating an instance (" + name + ") of the Printer");
         // ˄
     }
 
-    public void setPrinterName(String value) {
+    public String getName() {
         // ˅
-        this.printerName = value;
+        return name;
+        // ˄
+    }
+
+    public void changeName(String name) {
+        // ˅
+        this.name = name;
         // ˄
     }
 
@@ -29,7 +35,7 @@ public class RealPrinter implements Printer {
         // ˅
         System.out.println("==========");
         System.out.println(content);
-        System.out.println("Printed by " + printerName);
+        System.out.println("Printed by " + name);
         System.out.println("==========");
         // ˄
     }

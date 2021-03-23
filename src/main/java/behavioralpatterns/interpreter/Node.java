@@ -8,6 +8,8 @@ public interface Node {
 
     void parse(Context context) throws Exception;
 
+    String toString();
+
     // ˅
     
     // ˄

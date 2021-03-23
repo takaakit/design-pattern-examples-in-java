@@ -56,13 +56,13 @@ public class AppSafe extends Application implements Context {
         textMessage = new TextArea("");
 
         Button buttonUse = new Button("Use");
-        buttonUse.setOnMouseClicked(e -> useSafe());        // Use button pressed
+        buttonUse.setOnMouseClicked(e -> use());            // Use button pressed
 
         Button buttonAlarm = new Button("Alarm");
-        buttonAlarm.setOnMouseClicked(e -> soundBell());    // Alarm button pressed
+        buttonAlarm.setOnMouseClicked(e -> alarm());        // Alarm button pressed
 
         Button buttonPhone = new Button("Phone");
-        buttonPhone.setOnMouseClicked(e -> call());         // Phone button pressed
+        buttonPhone.setOnMouseClicked(e -> phone());        // Phone button pressed
 
         Button buttonExit = new Button("Exit");
         buttonExit.setOnMouseClicked(e -> exit());          // Exit button pressed
@@ -125,19 +125,19 @@ public class AppSafe extends Application implements Context {
         // ˄
     }
 
-    private void useSafe() {
+    private void use() {
         // ˅
         state.useSafe(this);
         // ˄
     }
 
-    private void soundBell() {
+    private void alarm() {
         // ˅
         state.soundBell(this);
         // ˄
     }
 
-    private void call() {
+    private void phone() {
         // ˅
         state.call(this);
         // ˄

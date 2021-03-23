@@ -12,7 +12,7 @@ public class HtmlWriter {
 
     private final Writer writer;
 
-    HtmlWriter(Writer writer) {
+    public HtmlWriter(Writer writer) {
         // ˅
         this.writer = writer;
         
@@ -20,7 +20,7 @@ public class HtmlWriter {
     }
 
     // Write a title
-    void heading(String title) throws IOException {
+    public void heading(String title) throws IOException {
         // ˅
         writer.write("<html>");
         writer.write("<head><title>" + title + "</title></head>");
@@ -30,20 +30,20 @@ public class HtmlWriter {
     }
 
     // Write a paragraph
-    void paragraph(String message) throws IOException {
+    public void paragraph(String message) throws IOException {
         // ˅
         writer.write("<p>" + message + "</p>\n");
         // ˄
     }
 
     // Write a mail address
-    void mailto(String mailAddress, String userName) throws IOException {
+    public void mailto(String mailAddress, String userName) throws IOException {
         // ˅
         anchor("mailto:" + mailAddress, userName);
         // ˄
     }
 
-    void close() throws IOException {
+    public void close() throws IOException {
         // ˅
         writer.write("</body>");
         writer.write("</html>\n");

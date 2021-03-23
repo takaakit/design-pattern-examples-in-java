@@ -118,7 +118,7 @@ public class AppLogin extends Application implements Mediator {
             System.exit(0);
         }
         else {
-            if (radioGuest.isSelected()) {    // Guest mode
+            if (radioGuest.isSelected()) {          // Guest mode
                 textUsername.setActivation(false);
                 textPassword.setActivation(false);
                 buttonOk.setActivation(true);

@@ -3,7 +3,7 @@ package structuralpatterns.proxy;
 
 // ˄
 
-public class PrinterProxy implements Printer {
+public class ProxyPrinter implements Printer {
     // ˅
 
     // ˄
@@ -13,7 +13,7 @@ public class PrinterProxy implements Printer {
     // A printer that actually prints
     private RealPrinter real;
 
-    public PrinterProxy(String name) {
+    public ProxyPrinter(String name) {
         // ˅
         this.currentName = name;
         this.real = null;
@@ -21,18 +21,20 @@ public class PrinterProxy implements Printer {
         // ˄
     }
 
-    public String getPrinterName() {
+    @Override
+    public String getName() {
         // ˅
         return currentName;
         // ˄
     }
 
-    public void setPrinterName(String value) {
+    @Override
+    public void changeName(String name) {
         // ˅
         if (real != null) {
-            real.setPrinterName(value);
+            real.changeName(name);
         }
-        this.currentName = value;
+        this.currentName = name;
         // ˄
     }
 

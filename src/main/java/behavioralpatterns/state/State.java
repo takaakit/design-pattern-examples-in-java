@@ -17,6 +17,8 @@ public interface State {
     // Make a normal call
     void call(Context context);
 
+    String toString();
+
     // ˅
     
     // ˄

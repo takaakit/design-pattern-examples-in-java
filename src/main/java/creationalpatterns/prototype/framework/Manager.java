@@ -28,7 +28,7 @@ public class Manager {
     public Display getDisplay(String displayName) {
         // ˅
         Display d = display.get(displayName);
-        return d.createClone();
+        return d.clone();
         // ˄
     }
 
