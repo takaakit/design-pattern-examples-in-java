@@ -22,7 +22,6 @@ public class DaytimeState implements State {
         // ˄
     }
 
-    // Set time
     @Override
     public void setTime(Context context, int hour) {
         // ˅
@@ -32,25 +31,22 @@ public class DaytimeState implements State {
         // ˄
     }
 
-    // Use a safe
     @Override
-    public void useSafe(Context context) {
+    public void use(Context context) {
         // ˅
         context.recordSecurityLog("Use a safe in the daytime");
         // ˄
     }
 
-    // Sound a emergency bell
     @Override
-    public void soundBell(Context context) {
+    public void alarm(Context context) {
         // ˅
         context.callSecurityGuardsRoom("Sound a emergency bell in the daytime");
         // ˄
     }
 
-    // Make a normal call
     @Override
-    public void call(Context context) {
+    public void phone(Context context) {
         // ˅
         context.callSecurityGuardsRoom("Make a normal call in the daytime");
         // ˄

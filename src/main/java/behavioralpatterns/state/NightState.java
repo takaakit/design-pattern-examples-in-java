@@ -22,7 +22,6 @@ public class NightState implements State {
         // ˄
     }
 
-    // Set time
     @Override
     public void setTime(Context context, int hour) {
         // ˅
@@ -32,25 +31,22 @@ public class NightState implements State {
         // ˄
     }
 
-    // Use a safe
     @Override
-    public void useSafe(Context context) {
+    public void use(Context context) {
         // ˅
         context.callSecurityGuardsRoom("Emergency: Use a safe at night!");
         // ˄
     }
 
-    // Sound a emergency bell
     @Override
-    public void soundBell(Context context) {
+    public void alarm(Context context) {
         // ˅
         context.callSecurityGuardsRoom("Sound a emergency bell at night");
         // ˄
     }
 
-    // Make a normal call
     @Override
-    public void call(Context context) {
+    public void phone(Context context) {
         // ˅
         context.recordSecurityLog("Record a night call");
         // ˄

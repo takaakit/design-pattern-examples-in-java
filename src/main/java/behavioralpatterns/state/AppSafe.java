@@ -56,20 +56,17 @@ public class AppSafe extends Application implements Context {
         textMessage = new TextArea("");
 
         Button buttonUse = new Button("Use");
-        buttonUse.setOnMouseClicked(e -> use());            // Use button pressed
+        buttonUse.setOnMouseClicked(e -> pressedUseButton());
 
         Button buttonAlarm = new Button("Alarm");
-        buttonAlarm.setOnMouseClicked(e -> alarm());        // Alarm button pressed
+        buttonAlarm.setOnMouseClicked(e -> pressedAlarmButton());
 
         Button buttonPhone = new Button("Phone");
-        buttonPhone.setOnMouseClicked(e -> phone());        // Phone button pressed
-
-        Button buttonExit = new Button("Exit");
-        buttonExit.setOnMouseClicked(e -> exit());          // Exit button pressed
+        buttonPhone.setOnMouseClicked(e -> pressedPhoneButton());
 
         Pane topPane = new Pane(textTime);
         Pane centerScreen = new Pane(textMessage);
-        HBox bottomPane = new HBox(buttonUse, buttonAlarm, buttonPhone, buttonExit);
+        HBox bottomPane = new HBox(buttonUse, buttonAlarm, buttonPhone);
         bottomPane.setAlignment(Pos.BOTTOM_CENTER);
         VBox mainPane = new VBox(topPane, centerScreen, bottomPane);
 
@@ -125,27 +122,21 @@ public class AppSafe extends Application implements Context {
         // ˄
     }
 
-    private void use() {
+    private void pressedUseButton() {
         // ˅
-        state.useSafe(this);
+        state.use(this);
         // ˄
     }
 
-    private void alarm() {
+    private void pressedAlarmButton() {
         // ˅
-        state.soundBell(this);
+        state.alarm(this);
         // ˄
     }
 
-    private void phone() {
+    private void pressedPhoneButton() {
         // ˅
-        state.call(this);
-        // ˄
-    }
-
-    private void exit() {
-        // ˅
-        System.exit(0);
+        state.phone(this);
         // ˄
     }
 

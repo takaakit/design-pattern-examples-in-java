@@ -5,17 +5,13 @@ package behavioralpatterns.state;
 
 public interface State {
 
-    // Set time
     void setTime(Context context, int hour);
 
-    // Use a safe
-    void useSafe(Context context);
+    void use(Context context);
 
-    // Sound a emergency bell
-    void soundBell(Context context);
+    void alarm(Context context);
 
-    // Make a normal call
-    void call(Context context);
+    void phone(Context context);
 
     String toString();
 
