@@ -1,6 +1,7 @@
 package behavioralpatterns.state;
 // ˅
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -53,7 +54,9 @@ public class AppSafe extends Application implements Context {
     public void start(Stage primaryStage) {
         // ˅
         textTime = new TextField("");
+        textTime.setEditable(false);
         textMessage = new TextArea("");
+        textMessage.setEditable(false);
 
         Button buttonUse = new Button("Use");
         buttonUse.setOnMouseClicked(e -> pressedUseButton());
@@ -83,19 +86,22 @@ public class AppSafe extends Application implements Context {
     // Set time
     public void setTime(int hour) {
         // ˅
-        String currentTime = "Current Time : ";
-        if (hour < 10) {
-            currentTime += "0" + hour + ":00";
-        }
-        else {
-            currentTime += hour + ":00";
-        }
-    	
-        System.out.println(currentTime);
-        if (textTime != null) {
-            textTime.setText(currentTime);
-        }
-        
+        Platform.runLater(() ->     // Updating UI is run on the JavaFX Application thread using Platform.runLater.
+        {
+            String currentTime = "Current Time : ";
+            if (hour < 10) {
+                currentTime += "0" + hour + ":00";
+            }
+            else {
+                currentTime += hour + ":00";
+            }
+
+            System.out.println(currentTime);
+            if (textTime != null) {
+                textTime.setText(currentTime);
+            }
+        });
+
     	state.setTime(this, hour);
         // ˄
     }
