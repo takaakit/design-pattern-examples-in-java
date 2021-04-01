@@ -41,7 +41,7 @@ public class DaytimeState implements State {
     @Override
     public void alarm(Context context) {
         // ˅
-        context.callSecurityGuardsRoom("Sound a emergency bell in the daytime");
+        context.callSecurityGuardsRoom("Sound an emergency bell in the daytime");
         // ˄
     }
 

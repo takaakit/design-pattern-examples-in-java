@@ -41,7 +41,7 @@ public class NightState implements State {
     @Override
     public void alarm(Context context) {
         // ˅
-        context.callSecurityGuardsRoom("Sound a emergency bell at night");
+        context.callSecurityGuardsRoom("Sound an emergency bell at night");
         // ˄
     }
 
