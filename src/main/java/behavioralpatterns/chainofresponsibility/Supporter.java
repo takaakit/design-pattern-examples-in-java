@@ -58,7 +58,7 @@ public abstract class Supporter {
     // Trouble was unsupported.
     private void unsupported(Trouble trouble) {
         // ˅
-        System.out.println(trouble.toString() + " was not handled.");
+        System.out.println(trouble + " was not handled.");
         // ˄
     }
 
