@@ -9,7 +9,7 @@ public class BarChartObserver implements Observer {
     
     // ˄
 
-    private NumberSubject numberSubject;
+    private final NumberSubject numberSubject;
 
     public BarChartObserver(NumberSubject numberSubject) {
         // ˅

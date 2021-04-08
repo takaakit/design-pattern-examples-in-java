@@ -9,7 +9,7 @@ public class DigitObserver implements Observer {
     
     // ˄
 
-    private NumberSubject numberSubject;
+    private final NumberSubject numberSubject;
 
     public DigitObserver(NumberSubject numberSubject) {
         // ˅
