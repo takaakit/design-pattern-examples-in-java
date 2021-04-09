@@ -5,6 +5,7 @@ import java.util.List;
 
 // ˄
 
+// Provides an interface for attaching and detaching Observer objects.
 public class Subject {
     // ˅
     
