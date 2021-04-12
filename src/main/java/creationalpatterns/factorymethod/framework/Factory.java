@@ -10,7 +10,13 @@ public abstract class Factory {
 
     public Product create(String owner) {
         // ˅
-        return createProduct(owner);
+        // Write pre-creation code here, if any.
+
+        Product product = createProduct(owner);
+
+        // Write post-creation code here, if any.
+
+        return product;
         // ˄
     }
 
