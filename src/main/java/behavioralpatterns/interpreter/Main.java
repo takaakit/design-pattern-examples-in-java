@@ -38,7 +38,7 @@ After parsing  : [program [repeat 4 [forward, right]]]
 
 public class Main {
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/behavioralPatterns/interpreter/program.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/behavioralpatterns/interpreter/program.txt"))) {
             String text;
             while ((text = reader.readLine()) != null) {
                 System.out.println("Before parsing : " + text);
