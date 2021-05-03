@@ -31,18 +31,11 @@ public class AppMain extends Application {
     public void start(Stage primaryStage) {
         // ˅
         // Create buttons
-        Button clearButton = new Button("Clear");
-        clearButton.setOnMousePressed(e -> {
-            canvas.clear();
-            history.clear();
-        });
-
         Button undoButton = new Button("Undo");
-        undoButton.setOnMousePressed(e -> {
-            canvas.clear();
-            history.undo();
-            history.execute();
-        });
+        undoButton.setOnMousePressed(e -> undo());
+
+        Button clearButton = new Button("Clear");
+        clearButton.setOnMousePressed(e -> clear());
 
         // Create panes
         HBox hBox = new HBox(undoButton, clearButton);
@@ -50,11 +43,7 @@ public class AppMain extends Application {
 
         // Create a scene
         Scene scene = new Scene(mainPane);
-        scene.setOnMouseDragged(e -> {
-            PaintingCommand paintingCommand = new PaintingCommand(canvas, e.getSceneX(), e.getSceneY());
-            history.add(paintingCommand);
-            paintingCommand.execute();
-        });
+        scene.setOnMouseDragged(e -> onDragged(e.getSceneX(), e.getSceneY()));
 
         primaryStage.setTitle("Command Example");
         primaryStage.setScene(scene);
@@ -62,6 +51,29 @@ public class AppMain extends Application {
 
         // Show
         primaryStage.show();
+        // ˄
+    }
+
+    private void onDragged(double x, double y) {
+        // ˅
+        PaintingCommand paintingCommand = new PaintingCommand(canvas, x, y);
+        history.add(paintingCommand);
+        paintingCommand.execute();
+        // ˄
+    }
+
+    private void undo() {
+        // ˅
+        canvas.clear();
+        history.undo();
+        history.execute();
+        // ˄
+    }
+
+    private void clear() {
+        // ˅
+        canvas.clear();
+        history.clear();
         // ˄
     }
 
