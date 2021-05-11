@@ -50,10 +50,9 @@ public class Directory extends FileSystemElement {
     }
 
     // Add an element
-    public FileSystemElement add(FileSystemElement element) {
+    public void add(FileSystemElement element) {
         // ˅
         elements.add(element);
-        return this;
         // ˄
     }
 
