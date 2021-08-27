@@ -6,10 +6,9 @@ Design Pattern Examples in Java
 Model and code examples of GoF Design Patterns for Java.  
 This project is available for the following objectives:  
 
-* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To understand GoF Design Pattern examples in Java.
 * To understand the mapping between UML model and Java code.
-* To understand GoF Design Pattern examples in Java.  
-  etc.
+* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
 
 > UML model example:
 
