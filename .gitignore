@@ -1,7 +1,4 @@
-.gradle
 .idea
-build
-out
-bin
+target
 *.iml
 *.asta.lock
