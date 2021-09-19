@@ -17,7 +17,7 @@ This project is available for the following objectives:
 <a id="code-example"></a>
 > Java code example:
 
-```java:File class
+```java
 package structuralpatterns.composite;
 // ˅
 
