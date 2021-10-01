@@ -32,7 +32,7 @@ public class TextDisplayImpl implements DisplayImpl {
     @Override
     public void implWrite() {
         // ˅
-        System.out.println(":" + text + ":");                // Enclose a text with ":" and display it.
+        System.out.println(":" + text + ":");           // Enclose a text with ":" and display it.
         // ˄
     }
 

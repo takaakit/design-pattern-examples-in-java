@@ -34,9 +34,9 @@ public class ListVisitor implements Visitor {
         System.out.println(currentDirectory + "/" + directory);
         String visitedDirectory = currentDirectory;
         currentDirectory = currentDirectory + "/" + directory.getName();
-        Iterator it = directory.iterator();
+        Iterator<FileSystemElement> it = directory.iterator();
         while (it.hasNext()) {
-            FileSystemElement element = (FileSystemElement)it.next();
+            FileSystemElement element = it.next();
             element.accept(this);
         }
         currentDirectory = visitedDirectory;

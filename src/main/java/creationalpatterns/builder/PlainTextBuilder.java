@@ -22,7 +22,7 @@ public class PlainTextBuilder implements Builder {
     public void createTitle(String title) {
         // ˅
         builder.append("--------------------------------\n");     // Decoration line
-        builder.append("[").append(title).append("]\n");                             // Title
+        builder.append("[").append(title).append("]\n");          // Title
         builder.append("\n");                                     // Blank line
         // ˄
     }
@@ -31,7 +31,7 @@ public class PlainTextBuilder implements Builder {
     @Override
     public void createSection(String section) {
         // ˅
-        builder.append("* ").append(section).append("\n");                           // Section
+        builder.append("* ").append(section).append("\n");        // Section
         builder.append("\n");                                     // Blank line
         // ˄
     }
@@ -41,7 +41,7 @@ public class PlainTextBuilder implements Builder {
     public void createItems(String[] items) {
         // ˅
         for (String item : items) {
-            builder.append("  - ").append(item).append("\n");                  // Items
+            builder.append("  - ").append(item).append("\n");     // Items
         }
         builder.append("\n");                                     // Blank line
         // ˄

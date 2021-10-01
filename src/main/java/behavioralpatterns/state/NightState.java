@@ -8,7 +8,7 @@ public class NightState implements State {
     
     // ˄
 
-    private static NightState instance = new NightState();
+    private static final NightState instance = new NightState();
 
     public static NightState getInstance() {
         // ˅

@@ -9,7 +9,7 @@ public class Memento {
     // ˄
 
     // Money
-    private int money;
+    private final int money;
 
     public Memento(int money) {
         // ˅

@@ -8,7 +8,7 @@ public class DaytimeState implements State {
     
     // ˄
 
-    private static DaytimeState instance = new DaytimeState();
+    private static final DaytimeState instance = new DaytimeState();
 
     public static DaytimeState getInstance() {
         // ˅

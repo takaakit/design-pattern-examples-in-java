@@ -1,6 +1,5 @@
 package behavioralpatterns.observer;
 // ˅
-import java.util.Random;
 
 // ˄
 
