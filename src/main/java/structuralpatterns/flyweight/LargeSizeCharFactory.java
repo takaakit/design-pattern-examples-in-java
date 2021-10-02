@@ -10,7 +10,7 @@ public class LargeSizeCharFactory {
 
     // ˄
 
-    private final Map<String, LargeSizeChar> poolChars;
+    private final Map<Character, LargeSizeChar> poolChars;
 
     private static final LargeSizeCharFactory instance = new LargeSizeCharFactory();
 
@@ -32,7 +32,7 @@ public class LargeSizeCharFactory {
         LargeSizeChar lsc = poolChars.get(charName);
         if (lsc == null) {
             lsc = new LargeSizeChar(charName);            // Create an instance
-            poolChars.put(String.valueOf(charName), lsc);
+            poolChars.put(charName, lsc);
         }
         return lsc;
         // ˄
