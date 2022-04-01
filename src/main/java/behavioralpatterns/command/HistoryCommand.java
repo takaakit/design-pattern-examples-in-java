@@ -15,7 +15,7 @@ public class HistoryCommand implements Command {
 
     public HistoryCommand() {
         // ˅
-        this.pastCommands = new Stack<Command>();
+        this.pastCommands = new Stack<>();
         
         // ˄
     }

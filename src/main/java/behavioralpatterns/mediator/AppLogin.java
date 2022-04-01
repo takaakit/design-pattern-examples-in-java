@@ -51,7 +51,7 @@ public class AppLogin extends Application implements Mediator {
         radioGuest.getRadioButton().setToggleGroup(toggleGroup);
         radioLogin.getRadioButton().setToggleGroup(toggleGroup);
 
-        // Set a initial state
+        // Set an initial state
         radioGuest.getRadioButton().setSelected(true);
         textUsername.setActivation(false);
         textPassword.setActivation(false);
