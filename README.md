@@ -79,11 +79,7 @@ Installation
   [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
 **Java Development Environment**
-* Install Java Development Kit (JDK) and JavaFX.  
-  If you don't want to install JavaFX, you need to remove the following packages that use JavaFX to prevent build errors.
-  - src/main/java/behavioralpatterns/command
-  - src/main/java/behavioralpatterns/mediator
-  - src/main/java/behavioralpatterns/state
+* Install Java SDK **11** or higher.  
 * Optionally, install an IDE (e.g. [IntelliJ](https://www.jetbrains.com/idea/download/)).
 
 Usage
