@@ -20,6 +20,7 @@ public class HistoryCommand implements Command {
         // ˄
     }
 
+    // Execute all past commands
     @Override
     public void execute() {
         // ˅

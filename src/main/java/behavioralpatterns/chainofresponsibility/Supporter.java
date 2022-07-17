@@ -38,7 +38,7 @@ public abstract class Supporter {
         // ˄
     }
 
-    // Set a next supporter.
+    // Set a next supporter and return it.
     public Supporter setNext(Supporter next) {
         // ˅
         this.next = next;

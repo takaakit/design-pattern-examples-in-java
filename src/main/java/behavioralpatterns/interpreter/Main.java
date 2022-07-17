@@ -38,6 +38,7 @@ After parsing  : [program [repeat 4 [forward, right]]]
 
 public class Main {
     public static void main(String[] args) {
+        // Reads commands line by line from the "program.txt" and parses them.
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/behavioralpatterns/interpreter/program.txt"))) {
             String text;
             while ((text = reader.readLine()) != null) {
