@@ -20,6 +20,7 @@ public class DigitObserver implements Observer {
     @Override
     public void update(Subject changedSubject) {
         // ˅
+        // Before processing, it checks to make sure the changed subject is the subject held.
         if (changedSubject.equals(this.numberSubject)) {
             System.out.println("Digit    : " + this.numberSubject.getValue());
         }
