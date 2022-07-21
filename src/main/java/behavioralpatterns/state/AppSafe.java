@@ -37,6 +37,7 @@ public class AppSafe extends Application implements Context {
 
         new Thread(() -> {
             while (true) {
+                // Advance one hour for every second of real time.
                 for (int hour = 0; hour < 24; hour++) {
                     setTime(hour);        // Set the time
                     try {

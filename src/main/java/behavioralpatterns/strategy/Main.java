@@ -16,6 +16,8 @@ public class Main {
         for (int i = 0; i < 100; i++) {
             HandSignal handOfPlayer1 = player1.showHandSignal();
             HandSignal handOfPlayer2 = player2.showHandSignal();
+
+            // Judge win, loss, or draw
             GameResultType resultOfPlayer1;
             GameResultType resultOfPlayer2;
             if (handOfPlayer1.isStrongerThan(handOfPlayer2)) {
@@ -33,6 +35,7 @@ public class Main {
                 resultOfPlayer1 = Draw;
                 resultOfPlayer2 = Draw;
             }
+
             player1.notifyGameResult(resultOfPlayer1, handOfPlayer1, handOfPlayer2);
             player2.notifyGameResult(resultOfPlayer2, handOfPlayer2, handOfPlayer1);
         }
