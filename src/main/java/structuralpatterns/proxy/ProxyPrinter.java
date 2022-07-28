@@ -24,7 +24,12 @@ public class ProxyPrinter implements Printer {
     @Override
     public String getName() {
         // ˅
-        return currentName;
+        if (real != null) {
+            return real.getName();
+        }
+        else {
+            return currentName;
+        }
         // ˄
     }
 
