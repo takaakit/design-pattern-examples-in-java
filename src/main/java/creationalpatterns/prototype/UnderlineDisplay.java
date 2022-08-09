@@ -28,13 +28,8 @@ public class UnderlineDisplay implements Display {
     @Override
     public void show(String message) {
         // ˅
-        int length = message.length();
         System.out.println("\"" + message + "\"");
-        System.out.print(" ");
-        for (int i = 0; i < length; i++) {
-            System.out.print(underlineChar);
-        }
-        System.out.println();
+        System.out.println(" " + String.valueOf(underlineChar).repeat(message.length()));
         // ˄
     }
 

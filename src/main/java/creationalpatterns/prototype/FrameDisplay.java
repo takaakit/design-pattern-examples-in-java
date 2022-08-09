@@ -28,16 +28,9 @@ public class FrameDisplay implements Display {
     @Override
     public void show(String message) {
         // ˅
-        int length = message.length();
-        for (int i = 0; i < length + 4; i++) {
-            System.out.print(borderChar);
-        }
-        System.out.println();
+        System.out.println(String.valueOf(borderChar).repeat(message.length() + 4));
         System.out.println(borderChar + " " + message + " " + borderChar);
-        for (int i = 0; i < length + 4; i++) {
-            System.out.print(borderChar);
-        }
-        System.out.println();
+        System.out.println(String.valueOf(borderChar).repeat(message.length() + 4));
         // ˄
     }
 

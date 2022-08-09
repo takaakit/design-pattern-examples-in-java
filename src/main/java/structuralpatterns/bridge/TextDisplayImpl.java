@@ -46,9 +46,7 @@ public class TextDisplayImpl implements DisplayImpl {
     private void printLine() {
         // ˅
         System.out.print("*");                          // Display "*" mark at the beginning of a frame.
-        for (int i = 0; i < width; i++) {               // Display "." for the number of "width".
-            System.out.print(".");
-        }
+        System.out.print(".".repeat(width));            // Display "." for the number of "width".
         System.out.print("*\n");                        // Display "*" mark at the end of a frame.
         // ˄
     }

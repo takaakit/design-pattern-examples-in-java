@@ -44,11 +44,9 @@ public class StringDisplay extends AbstractDisplay {
 
     private void writeLine() {
         // ˅
-        System.out.print("+");              // Display an end mark "+"
-        for (int i = 0; i < width; i++) {
-            System.out.print("-");          // Display a line "-"
-        }
-        System.out.println("+");            // Display an end mark "+"
+        System.out.print("+");                  // Display an end mark "+"
+        System.out.print("-".repeat(width));    // Display a line "-"
+        System.out.println("+");                // Display an end mark "+"
         // ˄
     }
 

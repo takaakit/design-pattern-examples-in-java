@@ -46,11 +46,7 @@ public class FullFrame extends Frame {
 
     private String createLine(char ch, int size) {
         // ˅
-        StringBuilder buf = new StringBuilder();
-        for (int i = 0; i < size; i++) {
-            buf.append(ch);
-        }
-        return buf.toString();
+        return String.valueOf(ch).repeat(size);
         // ˄
     }
 

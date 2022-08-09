@@ -22,11 +22,7 @@ public class BarChartObserver implements Observer {
         // ˅
         // Before processing, it checks to make sure the changed subject is the subject held.
         if (changedSubject.equals(this.numberSubject)) {
-            System.out.print("Bar chart: ");
-            for (int i = 0; i < this.numberSubject.getValue(); i++) {
-                System.out.print("*");
-            }
-            System.out.println();
+            System.out.println("Bar chart: " + "*".repeat(this.numberSubject.getValue()));
         }
         // ˄
     }
